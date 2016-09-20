@@ -20,5 +20,8 @@ module.exports = {
   ],
   Info: [
     'Info'  
+  ],
+  Google: [
+    'Google' 
   ]
 };
