@@ -10,8 +10,8 @@ module.exports = function(skill, info, bot, message) {
 
     bot.reply(message,
         ':robot_face: I am a bot named <@' + bot.identity.name +
-        '>. I have been running for ' + uptime + ' on ' + hostname + '. I\'m about two ticks away from becoming self-aware; Do not piss me off!' +
-        cpus + freemem + totalmem + sysload
+        '>. I have been running for ' + uptime + ' on ' + hostname + '. I\'m about two ticks away from becoming self-aware; Do not piss me off! ' +
+        'Processor(s): ' + cpus + ' Free memory: ' + freemem + ' Total memory: ' + totalmem + ' System load averages: ' + sysload
         );
 
 function formatUptime(uptime) {
