@@ -32,5 +32,10 @@ module.exports = {
   ],
   CatFacts: [
     'meow meow'
+  ],
+  TheRules: [
+    'tell me the rules',
+    'three laws of robotics',
+    'three laws'
   ]
 }
