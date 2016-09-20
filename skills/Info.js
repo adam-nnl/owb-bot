@@ -12,22 +12,10 @@ module.exports = function(skill, info, bot, message) {
 		var cpu = cpus[i], total = 0, processTotal = 0, strPercent = '';
 
 		console.log("CPU %s:", i);
+		console.log("CPU model:", cpu.model);
+		console.log("CPU speed:", cpu.speed);
 		console.log("\t",'user',cpu.times.user,'|nice',cpu.times.nice,'|sys',cpu.times.sys,'|idle',cpu.times.idle,'|irq',cpu.times.irq);
 		
-		for(type in cpu.times){
-			total += cpu.times[type];
-		}
-
-		for(type in cpu.times){
-			var percent = Math.round(100 * cpu.times[type] / total);
-			strPercent += type + ' ' + percent + '%|';
-			if(type != 'idle'){
-				processTotal += percent;	
-			}
-		}
-		console.log("\t",strPercent)
-		console.log("\t",'T0TAL PROCESSOR: ',total);
-		console.log("\t",'TOTAL: ',processTotal);
 	}
 
     bot.reply(message,
