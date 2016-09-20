@@ -3,6 +3,10 @@ module.exports = function(skill, info, bot, message) {
 
     var hostname = os.hostname();
     var uptime = formatUptime(process.uptime());
+    var sysload = os.loadavg();
+    var cpus = os.cpus();
+    var freemem = os.freemem();
+    var totalmem = os.totalmem();
 
     bot.reply(message,
         ':robot_face: I am a bot named <@' + bot.identity.name +
