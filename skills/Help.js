@@ -2,9 +2,8 @@ module.exports = function(skill, info, bot, message) {
     var appRoot = process.cwd();   
     var builtinPhrases = require('../builtins');
 
-    console.log(require('../custom-phrases.json'));
-    //var customPhrasesText = require('./custom-phrases.json');
-    var customPhrases;
+    var customPhrases = require('../custom-phrases.json');
+    //var customPhrases;
     //console.log()
     //try {
     //    customPhrasesText = fs.readFileSync('../custom-phrases.json').toString();
@@ -32,12 +31,12 @@ module.exports = function(skill, info, bot, message) {
         }
     }
     
-    //bot.reply(message,'Custom-added commands: ' );
-    //for (var key in p) {
-    //    if (p.hasOwnProperty(key)) {
-    //        bot.reply(message,'These are my current commands: ' );
-    //        //console.log(key + " -> " + p[key]);
-    //    }
-    //}
+    bot.reply(message,'Custom-added commands: ' );
+    for (var key in customPhrases) {
+        if (customPhrases.hasOwnProperty(key)) {
+            bot.reply(message,'These are my current commands: ' );
+            console.log(key + " -> " + customPhrases[key]);
+        }
+    }
     
 };
