@@ -23,6 +23,8 @@
   "homepage": "https://github.com/adam-nnl/owb-bot#readme",
   "dependencies": {
     "botkit": "0.2.2",
-    "natural": "^0.2.1"
+    "natural": "^0.2.1",
+    "request": "2.75.0",
+    "simple-git": "1.50.0"
   }
 }
