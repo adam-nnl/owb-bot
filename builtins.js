@@ -14,5 +14,11 @@ module.exports = {
     'lorem ipsum dolor amet is what you should say back to me',
     'be a good bot and parrot benf fodjsi bdfsjdhf bazz back to me',
     'copy cat behf sdkjhfg peiurf fdlkgj kwjhe foufg'
+  ],
+  Help: [
+    'Help'
+  ],
+  Info: [
+    'Info'  
   ]
 };
