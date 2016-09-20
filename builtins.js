@@ -33,5 +33,4 @@ module.exports = {
   CatFacts: [
     'meow meow'
   ]
-  }
-};
+}
