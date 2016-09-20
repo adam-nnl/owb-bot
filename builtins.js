@@ -26,5 +26,12 @@ module.exports = {
   ],
   Backup: [
     'Backup'  
+  ],
+  FuckOff: [
+    'Fuck off'
+  ],
+  CatFacts: [
+    'meow meow'
   ]
+  }
 };
