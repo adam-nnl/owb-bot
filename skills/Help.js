@@ -1,8 +1,8 @@
 module.exports = function(skill, info, bot, message) {
     var appRoot = process.cwd();   
-    var builtinPhrases = require('./builtins');
+    var builtinPhrases = require('../builtins');
 
-    console.log(require('./custom-phrases.json'));
+    console.log(require('../custom-phrases.json'));
     //var customPhrasesText = require('./custom-phrases.json');
     var customPhrases;
     //console.log()
