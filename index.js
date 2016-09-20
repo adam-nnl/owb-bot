@@ -34,7 +34,7 @@ Bottie.Brain.think();
 console.log('Bottie finished learning, time to listen...');
 Bottie.Ears
   .listen()
-  .hear('LEARN-SKILL', function(speech, message) {
+  .hear('!TRAIN', function(speech, message) {
     console.log('Delegating to on-the-fly training module...');
     Train(Bottie.Brain, speech, message);
   })
