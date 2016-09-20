@@ -1,10 +1,11 @@
 module.exports = function(skill, info, bot, message) {
-    var builtinPhrases = require('./builtins')
+    var appRoot = process.cwd();   
+    var builtinPhrases = require('../builtins')
 
     var customPhrasesText;
     var customPhrases;
     try {
-        customPhrasesText = fs.readFileSync(__dirname + '/custom-phrases.json').toString();
+        customPhrasesText = fs.readFileSync(appRoot + '/custom-phrases.json').toString();
     } catch (err) {
         throw new Error('Uh oh, Bottie could not find the custom-phrases.json file, did you move it?');
     }
