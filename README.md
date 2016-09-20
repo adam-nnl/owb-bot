@@ -2,8 +2,8 @@
 Awesome self learning bot based off
 http://blog.templeton.host/self-training-nlp-enabled-slack-bot-tutorial/
 
-Say, "!TRAIN" to begin a skill training then simply fill out the generated JS file for the skill functionality.
-Backup function allows for pushing to git repo to save custom added functions
+Say, `!TRAIN` to begin a skill training then simply fill out the generated JS file for the skill functionality.
+`Backup` function allows for pushing to git repo to save custom added functions
 
 Added built-in functions:
 * Help: Listing of builtin and custom added commands
