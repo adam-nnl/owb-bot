@@ -7,16 +7,14 @@ module.exports = function(skill, info, bot, message) {
     bot.reply(message,'Built-in commands: ' );
     for (var key in builtinPhrases) {
         if (builtinPhrases.hasOwnProperty(key)) {
-            bot.reply(message, key + " -> " + builtinPhrases[key]);
-            console.log(key + " -> " + builtinPhrases[key]);
+            bot.reply(message, 'Command: ' + key + ' --key words/phrases--> ' + builtinPhrases[key]);
         }
     }
     
     bot.reply(message,'Custom-added commands: ' );
     for (var key in customPhrases) {
         if (customPhrases.hasOwnProperty(key)) {
-            bot.reply(message, key + " -> " + customPhrases[key]);
-            console.log(key + " -> " + customPhrases[key]);
+            bot.reply(message, 'Command: ' + key + ' --key words/phrases--> ' + customPhrases[key]);
         }
     }
     
