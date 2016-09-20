@@ -15,7 +15,7 @@ module.exports = function(skill, info, bot, message) {
     bot.reply(message,'Custom-added commands: ' );
     for (var key in customPhrases) {
         if (customPhrases.hasOwnProperty(key)) {
-            bot.reply(message, 'Command: ' + key):
+            bot.reply(message, 'Command: ' + key);
             bot.reply(message, 'Key words/phrases: ' + customPhrases[key]);
         }
     }
