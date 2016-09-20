@@ -23,5 +23,8 @@ module.exports = {
   ],
   Google: [
     'Google' 
+  ],
+  Backup: [
+    'Backup'  
   ]
 };
