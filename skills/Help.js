@@ -1,9 +1,10 @@
 module.exports = function(skill, info, bot, message) {
     var appRoot = process.cwd();   
-    var builtinPhrases = require('../builtins')
+    var builtinPhrases = require('../builtins');
 
-    var customPhrasesText;
+    var customPhrasesText = require('../custom-phrases.json');
     var customPhrases;
+    //console.log()
     /*try {
         customPhrasesText = fs.readFileSync('../custom-phrases.json').toString();
     } catch (err) {
