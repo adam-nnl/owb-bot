@@ -1,8 +1,9 @@
 module.exports = function(skill, info, bot, message) {
     var appRoot = process.cwd();   
-    var builtinPhrases = require('../builtins');
+    var builtinPhrases = require('./builtins');
 
-    var customPhrasesText = require('../custom-phrases.json');
+    console.log(require('./custom-phrases.json'));
+    //var customPhrasesText = require('./custom-phrases.json');
     var customPhrases;
     //console.log()
     //try {
@@ -11,11 +12,11 @@ module.exports = function(skill, info, bot, message) {
     //    throw new Error('Uh oh, Bottie could not find the custom-phrases.json file, did you move it?');
     //}
     
-    try {
-        customPhrases = JSON.parse(customPhrasesText);
-    } catch (err) {
-        throw new Error('Uh oh, custom-phrases.json was not valid JSON! Fix it, please? :)');
-    }
+    //try {
+    //    customPhrases = JSON.parse(customPhrasesText);
+    //} catch (err) {
+    //    throw new Error('Uh oh, custom-phrases.json was not valid JSON! Fix it, please? :)');
+    //}
 
 
 //eachKey(customPhrases, Bottie.Teach);
