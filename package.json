@@ -1,5 +1,5 @@
 {
-  "name": "bottie",
+  "name": "owb-bot",
   "version": "0.0.1",
   "description": "Simple BotKit bot with NLP",
   "main": "index.js",
@@ -8,27 +8,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/andrew-templeton/bottie.git"
+    "url": "git+https://github.com/adam-nnl/owb-bot.git"
   },
   "keywords": [
     "slack",
     "bot",
-    "botkit",
-    "nlp",
-    "ai",
-    "natural",
-    "language",
-    "andrew",
-    "templeton"
+    "botkit"
   ],
-  "author": "Andrew Templeton",
+  "author": "Andrew Templeton, mods and changes Adam",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/andrew-templeton/bottie/issues"
+    "url": "https://github.com/adam-nnl/owb-bot/issues"
   },
-  "homepage": "https://github.com/andrew-templeton/bottie#readme",
+  "homepage": "https://github.com/adam-nnl/owb-bot#readme",
   "dependencies": {
-    "botkit": "0.0.5",
+    "botkit": "0.2.2",
     "natural": "^0.2.1"
   }
 }
