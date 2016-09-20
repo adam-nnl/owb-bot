@@ -8,13 +8,6 @@ module.exports = function(skill, info, bot, message) {
     var freemem = os.freemem();
     var totalmem = os.totalmem();
 
-	for(var i = 0, len = cpus.length; i < len; i++) {
-		var cpu = cpus[i], total = 0, processTotal = 0, strPercent = '';
-		console.log("CPU core:", i);
-		console.log("CPU model:", cpu.model);
-		console.log("CPU speed:", cpu.speed);
-	}
-
     bot.reply(message,':robot_face: I am a bot named <@' + bot.identity.name + '>. I have been running for ' + uptime + ' on ' + hostname + '. I\'m about two ticks away from becoming self-aware; Do not piss me off! ');
     bot.reply(message, 'System Info:');
     bot.reply(message, 'Free memory: ' + freemem + ' bytes');
@@ -24,11 +17,8 @@ module.exports = function(skill, info, bot, message) {
 	bot.reply(message, 'CPU cores: ' + cpus.length);
 	bot.reply(message, 'CPU model: ' + cpu.model);
 	bot.reply(message, 'CPU speed: ' + cpu.speed +'MHz');
-	//console.log("CPU core:", i);
-	//console.log("CPU model:", cpu.model);
-	//console.log("CPU speed:", cpu.speed);
 	}
-//'Processor(s): ' + cpus + ' Free memory: ' + freemem + ' Total memory: ' + totalmem + ' System load averages: ' + sysload
+
 function formatUptime(uptime) {
     var unit = 'second';
     if (uptime > 60) {
