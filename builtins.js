@@ -46,5 +46,8 @@ module.exports = {
   Jeopardy: [
     'trebek',
     'jeopardy'
+  ],
+  Jokes: [
+    'jaja'  
   ]
 }
