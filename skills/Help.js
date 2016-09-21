@@ -12,15 +12,17 @@ module.exports = function(skill, info, bot, message) {
             //bot.reply(message, '*Command:* ' + key);
             //bot.reply(message, '*Key words/phrases:* ' + builtinPhrases[key]);
         }
-    bot.reply(message, response);    
     }
+    bot.reply(message, response);    
     
     bot.reply(message,'These are my current custom-added commands: ' );
     for (var key2 in customPhrases) {
+        var response2 = '';
         if (customPhrases.hasOwnProperty(key2)) {
-            bot.reply(message, '*Command:* ' + key2);
-            bot.reply(message, '*Key words/phrases:* ' + customPhrases[key2]);
+            response = response + + '*Command:* ' + key2 + '\n' + '*Key words/phrases:* ' + customPhrases[key2] + '\n'
+            //bot.reply(message, '*Command:* ' + key2);
+            //bot.reply(message, '*Key words/phrases:* ' + customPhrases[key2]);
         }
     }
-    
+    bot.reply(message, response2); 
 };
