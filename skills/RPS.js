@@ -1,5 +1,5 @@
 module.exports = function(skill, info, bot, message) {
-const { hears, storage: { channels } } = controller;
+const { hears, storage: { channels } } = bot.controller;
 
 function privateConvo(bot, message) {
   const { user, channel } = message;
