@@ -9,7 +9,6 @@ module.exports = function(skill, info, bot, message) {
         if (builtinPhrases.hasOwnProperty(key)) {
             bot.reply(message, '*Command:* ' + key);
             bot.reply(message, '*Key words/phrases:* ' + builtinPhrases[key]);
-            bot.reply(message, ' ');
         }
     }
     
@@ -18,7 +17,6 @@ module.exports = function(skill, info, bot, message) {
         if (customPhrases.hasOwnProperty(key2)) {
             bot.reply(message, '*Command:* ' + key2);
             bot.reply(message, '*Key words/phrases:* ' + customPhrases[key2]);
-            bot.reply(message, ' ');
         }
     }
     
