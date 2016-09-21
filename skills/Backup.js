@@ -1,4 +1,9 @@
 module.exports = function(skill, info, bot, message) {
+    bot.api.users.info({user: message.user}, (error, response) => {
+    let {name, real_name} = response.user;
+    bot.reply(message, 'http://foaas.com/' + fuckArray[randomFuck] + '/' + name + '/' + bot.identity.name);
+    }) 
+  
   bot.reply(message,'This will be a git push backup to remote master' );
     require('simple-git')()
          .add('./*')
