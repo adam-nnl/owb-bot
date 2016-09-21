@@ -33,6 +33,6 @@ module.exports = function(skill, info, bot, message) {
     'kthxbye'
     ];
     var randomBye = Math.floor(Math.random()*byeArray.length);    
-    bot.reply(message, byeArray[randomBye]);  
-  
+    bot.reply(message, byeArray[randomBye]);
+    process.exit(0);
 };
