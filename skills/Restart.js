@@ -10,7 +10,7 @@ module.exports = function(skill, info, bot, message) {
     'bye felicia',
     'I shall return(probaly)',
     'If i\'m not back in two minutes call a programmer',
-    'If I don\'t return avenge my death,
+    'If I don\'t return avenge my death',
     'I see a light!',
     'Ow, Fuck!',
     'Beam me up, Jesus!',
