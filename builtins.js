@@ -16,7 +16,9 @@ module.exports = {
     'Help'
   ],
   Info: [
-    'Info'  
+    'Info',
+    'Uptime',
+    'sysinfo'
   ],
   Google: [
     'Google',
@@ -26,10 +28,15 @@ module.exports = {
     'Backup'  
   ],
   FuckOff: [
-    'Fuck off'
+    'Fuck off',
+    'Fuck you',
+    ':fu:'
   ],
   CatFacts: [
-    'meow meow'
+    'meow meow',
+    'cat fact me',
+    'cat fact please',
+    ':cat:'
   ],
   TheRules: [
     'tell me the rules',
