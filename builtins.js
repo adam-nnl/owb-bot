@@ -1,10 +1,7 @@
 module.exports = {
   BuiltinBaseJoke: [
-    'Tell me a joke!',
-    'We could use some humor here...',
-    'How about a joke?',
-    'I\'d do well with a laugh right about now.',
-    'Joke around with use please :)'
+    'Lame robot humor',
+    'Lame bot joke'
   ],
   SimonSays: [
     'Repeat back to me lorem ipsum dolor amet',
@@ -44,6 +41,12 @@ module.exports = {
     'jeopardy'
   ],
   Jokes: [
-    'jaja'  
+    'jaja',
+    'el oh el',
+    'yo mama',
+    'very punny',
+    'make me laugh',
+    'tell me a joke',
+    'tell us a joke'
   ]
 }
