@@ -6,10 +6,13 @@ module.exports = function(skill, info, bot, message) {
     bot.reply(message,'Say `!TRAIN` to begin a custom skill training session.' );
     bot.reply(message,'These are my current built-in commands: ' );
     for (var key in builtinPhrases) {
+        var response = '';
         if (builtinPhrases.hasOwnProperty(key)) {
-            bot.reply(message, '*Command:* ' + key);
-            bot.reply(message, '*Key words/phrases:* ' + builtinPhrases[key]);
+            response = response + '*Command:* ' + key + '\n' + '*Key words/phrases:* ' + builtinPhrases[key] + '\n'
+            //bot.reply(message, '*Command:* ' + key);
+            //bot.reply(message, '*Key words/phrases:* ' + builtinPhrases[key]);
         }
+    bot.reply(message, response);    
     }
     
     bot.reply(message,'These are my current custom-added commands: ' );
