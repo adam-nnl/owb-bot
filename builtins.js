@@ -30,7 +30,7 @@ module.exports = {
   FuckOff: [
     'Fuck off',
     'Fuck you',
-    ':fu:'
+    ':middle_finger:'
   ],
   CatFacts: [
     'meow meow',
