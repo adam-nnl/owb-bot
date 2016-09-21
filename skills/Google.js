@@ -1,6 +1,7 @@
 module.exports = function(skill, info, bot, message) {
     //'google (.*)'
-    var query = message.match[google (.*)];
+    var regex = /google (.*)/i;
+    var query = message.match[regex];
     
     //var query = message.text.replace(skill,'');
     var search_str = require('querystring').escape(query);
