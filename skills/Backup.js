@@ -5,7 +5,7 @@ module.exports = function(skill, info, bot, message) {
   bot.reply(message,'This will be a git commit and push from local/master to remote/master' );
     require('simple-git')()
          .add('./*')
-         .commit("bot commit by " + name )
+         .commit("bot commit initiated by: " + name )
          //.addRemote('origin', 'https://github.com/adam-nnl/owb-bot')
          .push(['-u', 'origin', 'master'], function () {
             // done. 
