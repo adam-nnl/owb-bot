@@ -22,7 +22,8 @@ module.exports = {
     'Info'  
   ],
   Google: [
-    'Google' 
+    'Google',
+    'google'
   ],
   Backup: [
     'Backup'  
