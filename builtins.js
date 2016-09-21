@@ -25,8 +25,18 @@ module.exports = {
     'google'
   ],
   Backup: [
-    'Backup'  
+    'Backup',
+    'Git push',
+    'Upload yourself'
   ],
+  GitPull: [
+    'Git pull',
+    'Update yourself'
+  ],
+  Restart: [
+    'bye felicia',
+    'restart',
+  ]
   FuckOff: [
     'Fuck off',
     'Fuck you',
