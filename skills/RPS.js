@@ -1,5 +1,5 @@
 module.exports = function(skill, info, bot, message) {
-const { hears, storage: { channels } } = bot;
+const { hears, storage: { channels } } = controller;
 
 function privateConvo(bot, message) {
   const { user, channel } = message;
@@ -89,7 +89,7 @@ hears(['rps'], 'direct_message,direct_mention,mention', (bot, message) => {
       if (err) throw err;
 
       bot.say({
-        text: `<@${playerTwo}> you've been challenged to a game of ROCK PAPER SCISSORS by <@${user}>,  say \`accept\` unless you're too scared.`,
+        text: `<@${playerTwo}> you've been challenged to a game of ROCK:mountain: PAPER:spiral_note_pad: SCISSORS:scissors: by <@${user}>,  say \`accept\` unless you're chicken :chicken:`,
         channel,
       });
 
@@ -111,7 +111,7 @@ hears(['accept'], 'ambient', (bot, message) => {
       const { players } = data;
 
       if (user in players && !players[user].accepted) {
-        bot.reply(message, 'GREAT, LET THE BATTLE BEGIN!!!');
+        bot.reply(message, 'GREAT, LET THE BATTLE BEGIN!!! :mountain::spiral_note_pad::scissors:');
 
         bot.startPrivateConversation(message, privateConvo(bot, message));
       } else {
