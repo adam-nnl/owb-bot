@@ -9,9 +9,7 @@ module.exports = function(skill, info, bot, message) {
     var totalmem = os.totalmem();
 
     bot.reply(message,':robot_face: I am a bot named <@' + bot.identity.name + '>. I have been running for ' + uptime + ' on ' + hostname + '. I\'m about two ticks away from becoming self-aware; Do not piss me off! ');
-    bot.reply(message, 'System Info:');
-    bot.reply(message, 'Free memory: ' + freemem + ' bytes');
-    bot.reply(message, 'Total memory: ' + totalmem + ' bytes');
+    bot.reply(message, 'System Info:' + '\n' + 'Free memory: ' + freemem + ' bytes' + '\n' + 'Total memory: ' + totalmem + ' bytes');
     for(var i = 0, len = cpus.length; i < len; i++) {
 	var cpu = cpus[i], total = 0, processTotal = 0, strPercent = '';
 	bot.reply(message, 'CPU cores: ' + cpus.length);
