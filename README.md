@@ -15,8 +15,11 @@ Added built-in functions:
 * CatFacts: Self explainitory
 * TheRules: Asimov three laws of robotics
 * Jokes: random jokes on command
+* Backup: Git push to remote repo
+* GitPull: pull -u from remote repo
+* Ping: PONG
 * RPS: rock, paper, scissors (in progress)
-* Jeopardy: Jeopady game (in progress)
+* Jeopardy: Jeopardy game (in progress)
 * ????
 
 OVER 9000 FT OVERVIEW
@@ -25,3 +28,4 @@ OVER 9000 FT OVERVIEW
 - `src/ears.js` uses botkit to listen/interact with slack
 - the `!TRAIN` keyword initiates training mode via `src/train.js` to add a new skill to `custom-phrases.json` and a js code stub in the skills folder
 - `src/brain.js` uses the natural NLP package to recognize defined skill keywords and execute the coresponding skill js file
+- new git functionality allows for backup and code editing via github
