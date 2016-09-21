@@ -1,5 +1,5 @@
 module.exports = function(skill, info, bot, message) {
-    var regex = /[0-9]+/g;
+    var regex = /google (.*)/i;
 var result = regex[Symbol.match](message.text);
 console.log(result);  // ["2016", "01", "02"]
     
