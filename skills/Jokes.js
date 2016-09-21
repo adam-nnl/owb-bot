@@ -1,4 +1,4 @@
 module.exports = function(skill, info, bot, message) {
-    var builtinPhrases = require('./jokes.json');
+    var jokesArray = require('./jokes.json');
     bot.reply(message, 'test');
 };
