@@ -1,11 +1,9 @@
 module.exports = function(skill, info, bot, message) {
-  bot.reply(message,'This will be a git pull from remote master to local master' );
+  bot.reply(message,'This will be a git pull from remote/master to local/master' );
     require('simple-git')()
-         //.add('./*')
-         //.commit("bot commit!")
-         //.addRemote('origin', 'https://github.com/adam-nnl/owb-bot')
-         //.push(['-u', 'origin', 'master'], function () {
-            // done. 
+         .pull(function(err, update) {
+            if(update && update.summary.changes) {
+              bot.reply(message,'Git pull complete! :)' );
+            }
          });
-  bot.reply(message,'Git pull complete' );
 };
