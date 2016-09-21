@@ -18,3 +18,10 @@ Added built-in functions:
 * RPS: rock, paper, scissors (in progress)
 * Jeopardy: Jeopady game (in progress)
 * ????
+
+OVER 9000 FT OVERVIEW
+- Index.js kicks off everything & runs the base logic
+- builtins.js and custom-phrases.json are arrays of skills and keywords to trigger them
+- src/ears.js uses botkit to listen/interact with slack
+- !TRAIN keyword initiates training mode via src/train.js to add a new skill to custom-phrases.json and a js code stub in the skills folder
+- src/brain.js uses the natural NLP package to recognize defined skill keywords and execute the coresponding skill js file
