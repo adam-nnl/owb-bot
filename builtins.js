@@ -38,5 +38,13 @@ module.exports = {
     'tell me the rules',
     'three laws of robotics',
     'three laws'
+  ],
+  RPS: [
+    'rps',
+    'RPS'
+  ],
+  Jeopardy: [
+    'trebek',
+    'jeopardy'
   ]
 }
