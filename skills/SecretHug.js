@@ -9,7 +9,7 @@ module.exports = function(skill, info, bot, message, db) {
     for (var i = 0, len = userData.length; i < len; i++) {
         HugUser(userData[i]);
     }  
-    //console.log(userData);
+    console.log(userData);
   } else {
     bot.reply(message, 'You didn\'t name anyone…were you the one that needed a hug ' + name + '?');
   }
