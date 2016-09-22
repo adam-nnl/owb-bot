@@ -66,7 +66,7 @@ module.exports = {
     'tell me a joke',
     'tell us a joke'
   ],
-  RockPaperScissors: [
-    'rps'
+  MemoryTest: [
+    'memtest'
   ]
 }
