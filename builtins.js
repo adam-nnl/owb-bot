@@ -74,5 +74,8 @@ module.exports = {
   ],
   RockPaperScissors: [
     'rps'
+  ],
+  SecretHug: [
+    'hug'
   ]
 }
