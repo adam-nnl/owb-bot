@@ -1,4 +1,8 @@
 module.exports = function(skill, info, bot, message, db) {
+  
+  var d = {
+  foo: "bar"
+};
   // save with generated ID
 db.save(d, function(err, id){
   // id is a unique ID
