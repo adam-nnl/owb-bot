@@ -65,5 +65,8 @@ module.exports = {
     'make me laugh',
     'tell me a joke',
     'tell us a joke'
+  ],
+  MemoryTest: [
+    'memtest'  
   ]
 }
