@@ -1,9 +1,9 @@
 module.exports = function(skill, info, bot, message) {
-  bot.self_ref = bot;
+  bot.storage.self_ref = bot.storage;
 
 util = require("util");
 
-var obj_str = util.inspect(bot);
+var obj_str = util.inspect(bot.storage);
 console.log(obj_str);
   
  // console.log(JSON.stringify(bot, null, 4));
