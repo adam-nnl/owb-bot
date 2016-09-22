@@ -34,7 +34,7 @@ module.exports = function(skill, info, bot, message) {
     ];
     var randomBye = Math.floor(Math.random()*byeArray.length);    
     bot.reply(message, byeArray[randomBye]);
-    wait(5000);
+    wait(50000);
     process.exit(0);
     
 function wait(ms){
