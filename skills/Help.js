@@ -1,4 +1,4 @@
-module.exports = function(skill, info, bot, message) {
+module.exports = function(skill, info, bot, message, db) {
     var builtinPhrases = require('../builtins');
     var customPhrases = require('../custom-phrases.json');
     //customPhrases = JSON.parse(customPhrasesText);
