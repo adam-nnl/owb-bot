@@ -1,5 +1,12 @@
 module.exports = function(skill, info, bot, message) {
-  console.log(JSON.stringify(bot, null, 4));
+  bot.self_ref = bot;
+
+util = require("util");
+
+var obj_str = util.inspect(bot);
+console.log(obj_str);
+  
+ // console.log(JSON.stringify(bot, null, 4));
   
 //bot.storage.users.save({id: message.user, foo:'bar'}, function(err) { console.log('yes'); });
 
