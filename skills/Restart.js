@@ -34,6 +34,12 @@ module.exports = function(skill, info, bot, message) {
     ];
     var randomBye = Math.floor(Math.random()*byeArray.length);
     bot.reply(message, 'Restarting.....  ' + byeArray[randomBye]);
+    function sleep (time) {
+      return new Promise((resolve) => setTimeout(resolve, time));
+    }
 
-    process.exit(0);
+    sleep(500).then(() => {
+      process.exit(0);
+    });
+    
 };
