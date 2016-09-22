@@ -12,9 +12,9 @@ module.exports = function(skill, info, bot, message) {
     bot.reply(message, 'System Info:' + '\n' + 'Free memory: ' + freemem + ' bytes' + '\n' + 'Total memory: ' + totalmem + ' bytes');
     for(var i = 0, len = cpus.length; i < len; i++) {
 	var cpu = cpus[i], total = 0, processTotal = 0, strPercent = '';
-	bot.reply(message, 'CPU cores: ' + cpus.length);
-	bot.reply(message, 'CPU model: ' + cpu.model);
-	bot.reply(message, 'CPU speed: ' + cpu.speed +'MHz');
+	bot.reply(message, 'CPU cores: ' + cpus.length + '\n' +
+	'CPU model: ' + cpu.model  + '\n' +
+	'CPU speed: ' + cpu.speed +'MHz');
 	}
 
 function formatUptime(uptime) {
