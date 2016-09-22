@@ -1,4 +1,4 @@
-module.exports = function(skill, info, bot, message) {
+module.exports = function(skill, info, bot, message, db) {
   bot.reply(message,'This will be a git pull from remote/master to local/master' );
     require('simple-git')()
          .pull(function(err, update) {
