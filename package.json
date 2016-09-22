@@ -25,6 +25,7 @@
     "botkit": "0.2.2",
     "natural": "^0.2.1",
     "request": "2.75.0",
-    "simple-git": "1.50.0"
+    "simple-git": "1.50.0",
+    "rock-paper-spock": "0.0.1"
   }
 }
