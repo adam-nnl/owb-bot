@@ -1,4 +1,4 @@
-module.exports = function(skill, info, bot, message) {
+module.exports = function(skill, info, bot, message, db) {
     bot.api.users.info({user: message.user}, (error, response) => {
     let {name, real_name} = response.user;
 
