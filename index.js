@@ -46,7 +46,7 @@ Bottie.Ears
     console.log('Bottie interpretation: ', interpretation);
     if (interpretation.guess) {
       console.log('Invoking skill: ' + interpretation.guess);
-      Bottie.Brain.invoke(interpretation.guess, interpretation, speech, message);
+      Bottie.Brain.invoke(interpretation.guess, interpretation, speech, message, db);
     } else {
       speech.reply(message, 'Hmm... I couldn\'t tell what you said...');
       speech.reply(message, '```\n' + JSON.stringify(interpretation) + '\n```');
