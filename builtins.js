@@ -36,6 +36,9 @@ module.exports = {
   Restart: [
     'bye felicia',
     'restart',
+    'kill yourself',
+    'seppuku',
+    'harakiri'
   ],
   FuckOff: [
     'Fuck off',
