@@ -39,7 +39,7 @@ Brain.prototype.invoke = function(skill, info, bot, message, db) {
     throw new Error('The invoked skill doesn\'t exist!');
   }
   console.log('Running skill code for ' + skill + '...');
-  skillCode(skill, info, bot, message);
+  skillCode(skill, info, bot, message, db);
   return this;
 };
 
