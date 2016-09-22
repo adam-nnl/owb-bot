@@ -16,7 +16,7 @@ module.exports = function(skill, info, bot, message, db) {
     bot.reply(message,'You can also teach me new skills! Just tell me `!TRAIN` to begin a custom skill training session.' + '\n' + 'These are my current custom-added commands: ' );
     for (var key2 in customPhrases) {
         if (customPhrases.hasOwnProperty(key2)) {
-            response = response + + '*Command:* ' + key2 + '\n' + '*Key words/phrases:* ' + customPhrases[key2] + '\n'
+            response2 = response2 + '*Command:* ' + key2 + '\n' + '*Key words/phrases:* ' + customPhrases[key2] + '\n'
         }
     }
     bot.reply(message, response2); 
