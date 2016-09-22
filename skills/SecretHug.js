@@ -2,7 +2,9 @@ module.exports = function(skill, info, bot, message, db) {
     bot.api.users.info({user: message.user}, (error, response) => {
     let {name, real_name} = response.user;
     //bot.reply(message, 'under development');
-    var userData = message.text.match(/<@([A-Z0–9]{9})>/); // parse the text for user's 9 character id
+    //var userData = message.text.match(/<@([A-Z0–9]{9})>/); // parse the text for user's 9 character id
+    
+    var userData = message.text.match(/<(.*?)>/);
     console.log(message.text);
 console.log(userData);
   if (userData) {
