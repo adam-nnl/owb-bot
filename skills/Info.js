@@ -1,4 +1,4 @@
-module.exports = function(skill, info, bot, message) {
+module.exports = function(skill, info, bot, message, db) {
     var os = require('os');
 
     var hostname = os.hostname();
