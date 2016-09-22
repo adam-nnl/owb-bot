@@ -30,7 +30,7 @@ Brain.prototype.interpret = function(phrase) {
   };
 };
 
-Brain.prototype.invoke = function(skill, info, bot, message) {
+Brain.prototype.invoke = function(skill, info, bot, message, db) {
   var skillCode;
   console.log('Grabbing code for skill: ' + skill);
   try {
