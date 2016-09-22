@@ -6,6 +6,7 @@ module.exports = function(skill, info, bot, message, db) {
 
   if (userData) {
     // if there is a user named send ze hugs!
+    console.log(userData);
   } else {
     bot.reply(message, 'You didn\'t name anyone…were you the one that needed a hug ' + name + '?');
   }
