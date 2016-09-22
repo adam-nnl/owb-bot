@@ -1,5 +1,5 @@
 module.exports = function(skill, info, bot, message) {
-  bot.reply(message, 'Restarting....');
+  
 
     var byeArray = [
     'Avenge meeeeeeee',
@@ -32,8 +32,8 @@ module.exports = function(skill, info, bot, message) {
     'peace out',
     'kthxbye'
     ];
-    var randomBye = Math.floor(Math.random()*byeArray.length);    
-    bot.reply(message, byeArray[randomBye]);
-    
+    var randomBye = Math.floor(Math.random()*byeArray.length);
+    bot.reply(message, 'Restarting.....  ' + byeArray[randomBye]);
+
     process.exit(0);
 };
