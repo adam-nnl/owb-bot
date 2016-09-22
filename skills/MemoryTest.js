@@ -1,5 +1,5 @@
 module.exports = function(skill, info, bot, message) {
-  bot.storage.self_ref = bot.storage;
+  bot.storage.self_ref = bot;
 
 util = require("util");
 
