@@ -6,7 +6,7 @@ var Brain = require('./src/brain');
 var Ears = require('./src/ears');
 var builtinPhrases = require('./builtins');
 var Store = require("jfs");
-var db = new Store("data");
+var db = new Store("./memory.json");
 
 var Bottie = {
   Brain: new Brain(),
