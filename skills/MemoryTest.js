@@ -1,5 +1,5 @@
 module.exports = function(skill, info, bot, message) {
-bot.memory_store.users.save({id: message.user, foo:'bar'}, function(err) { console.log('yes'); });
+bot.storage.users.save({id: message.user, foo:'bar'}, function(err) { console.log('yes'); });
 
 /*bot.memory_store.channels[channel_id]
 bot.memory_store.users[user_id]
