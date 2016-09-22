@@ -68,5 +68,8 @@ module.exports = {
   ],
   MemoryTest: [
     'memtest'  
+  ],
+  RockPaperScissors: [
+    'rps'
   ]
 }
