@@ -1,4 +1,4 @@
-module.exports = function(skill, info, bot, message) {
+module.exports = function(skill, info, bot, message, db) {
   var gameEngine = require('rock-paper-spock');
 
   var instance = new gameEngine(gameEngine.DefaultRules);
