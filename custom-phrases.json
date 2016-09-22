@@ -1,15 +1,7 @@
 {
-  "AdamTest": [
-    "I am Adam, I am testing",
-    "adam test"
-  ],
   "Ping": [
     "ping",
     "ping me",
     "you up?"
-  ],
-  "BobTrump": [
-    "Bob love trump",
-    "Bob :heart: Trump"
   ]
 }
