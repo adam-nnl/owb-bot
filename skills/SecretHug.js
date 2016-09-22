@@ -3,6 +3,7 @@ module.exports = function(skill, info, bot, message, db) {
     let {name, real_name} = response.user;
     //bot.reply(message, 'under development');
     var userData = message.text.match(/<@([A-Z0–9]{9})>/); // parse the text for user's 9 character id
+    console.log(message.text);
 console.log(userData);
   if (userData) {
     // if there is a user named send ze hugs!
