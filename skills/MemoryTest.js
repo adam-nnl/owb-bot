@@ -1,4 +1,9 @@
-module.exports = function(skill, info, bot, message) {
+module.exports = function(skill, info, bot, message, db) {
+  // save with generated ID
+db.save(d, function(err, id){
+  // id is a unique ID
+});
+  
   bot.self_ref = bot;
 
 util = require("util");
