@@ -1,4 +1,4 @@
-module.exports = function(skill, info, bot, message) {
+module.exports = function(skill, info, bot, message, db) {
 var request = require("request")
 
 var url = "http://catfacts-api.appspot.com/api/facts?number=1"
