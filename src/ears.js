@@ -6,7 +6,7 @@ module.exports = Ears;
 
 var Bot = BotKit.slackbot({
   debug: false,
-  json_file_store: 'memory.json'
+  storage: undefined
 });
 
 function Ears(token) {
