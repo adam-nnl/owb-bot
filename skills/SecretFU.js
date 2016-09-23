@@ -44,7 +44,7 @@ function FU(user) {
     var randomFuck = Math.floor(Math.random()* fuckArray.length);    
 
     var dmChannel = response.channel.id
-    bot.say({channel: dmChannel, text: 'Some one is throwing shade your way... :middle_finger:'})
+    bot.say({channel: dmChannel, text: 'Someone is throwing shade your way... :middle_finger:'})
     bot.say({channel: dmChannel, text: fuckArray[randomFuck]})
     })    
     
