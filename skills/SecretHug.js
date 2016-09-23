@@ -14,6 +14,7 @@ module.exports = function(skill, info, bot, message, db) {
         //console.log('userdate[i]' + userData[i].replace(/[^\w\s]/gi, ''));
     }  
     //console.log(userData);
+    bot.reply(message,'a hug has been sent! :hugging_face:');
   } else {
     bot.reply(message, 'You didn\'t name anyone…were you the one that needed a hug ' + name + '?');
   }
