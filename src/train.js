@@ -12,15 +12,15 @@ function Train(Brain, speech, message) {
   var phraseExamples = [];
   var phraseName;
   speech.startConversation(message, function(err, convo) {
-      convo.ask('Sure, what do you want to call this skill? ' +
-        'This is the machine name, so pick a good name for a file basename.', [
+      convo.ask('OK, what do you want to call this skill? ' +
+        'This is the machine name, so pick a good name for a javascript file.', [
           {
             pattern: '.*',
             callback: function(response, convo) {
               phraseName = response.text;
               convo.say('Right, I\'ll call it `' + phraseName + '`.');
               convo.say('Okay, now give me a bunch of ways you might say this. ' +
-                'When you\'re done, just sent me the word done all by itself on a line.');
+                'When you\'re done, just sent me the word *done* all by itself on a line.');
               convo.ask('How might you say this?', [
                 {
                   pattern: '.*',
