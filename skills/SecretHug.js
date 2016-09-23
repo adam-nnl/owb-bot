@@ -40,7 +40,7 @@ function HugUser(user) {
     var randomHug = Math.floor(Math.random()* hugArray.length);    
 
     var dmChannel = response.channel.id
-    bot.say({channel: dmChannel, text: 'Some one sent you a hug! :hugging_face:'})
+    bot.say({channel: dmChannel, text: 'Someone sent you a hug! :hugging_face:'})
     bot.say({channel: dmChannel, text: hugArray[randomHug]})
     })    
     
