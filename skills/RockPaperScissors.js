@@ -2,7 +2,7 @@ module.exports = function(skill, info, bot, message, db) {
   var gameEngine = require('rock-paper-spock');
   
     bot.api.users.info({user: message.user}, (error, response) => {
-        bot.reply(message, 'Rock Paper Scissors (lizard, spock, wizard, batman, glock?)');
+        bot.reply(message, 'Rock Paper Scissors (lizard, spock, spiderman, batman, wizard, glock?)');
     })  
 
   var instance = new gameEngine(gameEngine.DefaultRules);
