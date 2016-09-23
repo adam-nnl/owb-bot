@@ -4,8 +4,8 @@ module.exports = function(skill, info, bot, message, db) {
     //bot.reply(message, 'under development');
     //var userData = message.text.match(/<@([A-Z0–9]{9})>/); // parse the text for user's 9 character id
     
-    var userData = message.text.match(/<@(.*?)>/);
-    
+    //var userData = message.text.match(/<@(.*?)>/);
+    var userData = message.text.match(/\<(.*?)\>/g);
     //var userData = message.text.match(/\<([^}]+)\>/);
     console.log('messaage text: ' + message.text);
 console.log('userdata' + userData);
