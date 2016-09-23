@@ -14,7 +14,7 @@ console.log('userdata' + userData);
     for (var i = 0, len = userData.length; i < len; i++) {
         //HugUser(userData[i]);
         console.log('userdate[i]' + userData[i]);
-        console.log('userdate[i]' + userData[i].replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,""));
+        console.log('userdate[i]' + userData[i].replace(<@>/g,""));
     }  
     //console.log(userData);
   } else {
