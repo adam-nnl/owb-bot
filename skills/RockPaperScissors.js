@@ -1,5 +1,5 @@
 module.exports = function(skill, info, bot, message, db) {
-  var gameEngine = require('./rock-paper-spock');
+  var gameEngine = require('./rock-paper-spock.js');
   
     bot.api.users.info({user: message.user}, (error, response) => {
         bot.reply(message, 'Rock Paper Scissors (lizard, spock, spiderman, batman, wizard, glock?)');
