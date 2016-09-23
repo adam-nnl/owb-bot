@@ -3,10 +3,10 @@ module.exports = function(skill, info, bot, message, db) {
     let {name, real_name} = response.user;
     //bot.reply(message, 'under development');
     //var userData = message.text.match(/<@([A-Z0–9]{9})>/); // parse the text for user's 9 character id
-    var userData = message.text.match(/<@([^}]*)>/g);
-    //var userData = message.text.match(/<@(.*?)>/);
-    //var userData = message.text.match(/\<(.*?)\>/g);
-    //var userData = message.text.match(/\<([^}]+)\>/);
+    //var userData = message.text.match(/<@([^}]*)>/g);
+
+    var userData = message.text.match(/\<(.*?)\>/g);
+
     console.log('messaage text: ' + message.text);
 console.log('userdata' + userData);
   if (userData) {
@@ -14,6 +14,7 @@ console.log('userdata' + userData);
     for (var i = 0, len = userData.length; i < len; i++) {
         //HugUser(userData[i]);
         console.log('userdate[i]' + userData[i]);
+        console.log('userdate[i]' + userData[i].replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,""));
     }  
     //console.log(userData);
   } else {
