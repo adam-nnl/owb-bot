@@ -76,6 +76,10 @@ module.exports = {
     'rps'
   ],
   SecretHug: [
-    'hug'
+    'hug @'
+  ],
+  SecretFU: [
+    'fu @',
+    'I hate @'
   ]
 }
