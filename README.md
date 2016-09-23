@@ -18,6 +18,8 @@ Added built-in functions:
 * Backup: Git push to remote repo
 * GitPull: pull -u from remote repo
 * Ping: PONG
+* SecretHug: send love to other users via gifs
+* SecretFU: send shade to other users via gifs
 * RPS: rock, paper, scissors (in progress)
 * Jeopardy: Jeopardy game (in progress)
 * ????
