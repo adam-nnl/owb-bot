@@ -6,7 +6,7 @@ module.exports = function(skill, info, bot, message, db) {
     var challenged = userData[0].replace(/[^\w\s]/gi, '');
 
     bot.api.users.info({user: challenged}, (error, response) => {
-        bot.reply(message, ':loudspeaker::rotating_light::rotating_light::loudspeaker: ' + response.user.name + ' you have been challenged to a game of ROCK:mountain: , PAPER:spiral_note_pad: , SCISSORS:scissors: by ' + message.user.name + '! Prepare to defend your honor!'); 
+        bot.reply(message, ':rotating_light: ' + response.user.name + ' you have been challenged to a game of ROCK:mountain: , PAPER:spiral_note_pad: , SCISSORS:scissors:! Prepare to defend your honor!'); 
     });
     
     //bot.reply(message,'Let\'s rumble' + userData[0].replace(/[^\w\s]/gi, ''));
