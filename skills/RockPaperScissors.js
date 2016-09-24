@@ -12,6 +12,8 @@ module.exports = function(skill, info, bot, message, db) {
     console.log(userData[0].replace(/[^\w\s]/gi, ''));
     var challenger = getSlackName(message.user);//.replace(/[^\w\s]/gi, ''));
     var challenged = getSlackName(userData[0].replace(/[^\w\s]/gi, ''));
+    console.log(challenger);
+    console.log(challenged);
     bot.reply(message, challenger + ' has challenged ' + challenged); 
 
     
