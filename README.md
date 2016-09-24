@@ -3,6 +3,13 @@ Awesome self learning slack bot based off
 http://blog.templeton.host/self-training-nlp-enabled-slack-bot-tutorial/
 using botkit https://github.com/howdyai/botkit
 
+Pretty Normal Botkit[https://github.com/howdyai/botkit] setup:
+1) clone repo
+2) npm install
+3) export SLACK_TOKEN='your token hur'
+4) node index.js
+p.s. 5) to setup Git pull/push configure Backup.js and GitPull.js with your repo url and also [https://git-scm.com/docs/git-credential-store] 
+
 Say, `!TRAIN` to begin a skill training then simply fill out the generated JS file for the skill functionality.
 `Backup` function allows for pushing to git repo to save custom added functions
 
