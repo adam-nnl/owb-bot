@@ -25,11 +25,31 @@ var rpsGame = module.exports = function(opts) {
 
 rpsGame.__defineGetter__("DefaultRules", function() {
   return {
+    rock: {beats: ["scissors"]}
+    ,scissors: {beats: ["paper"]}
+    ,paper: {beats: ["rock"]}
+  };
+});
+rpsGame.__defineGetter__("RPSLSRules", function() {
+  return {
     rock: {beats: ["scissors", "lizard"]}
     ,scissors: {beats: ["paper", "lizard"]}
     ,paper: {beats: ["rock", "spock"]}
     ,spock: {beats: ["rock", "scissors"]}
     ,lizard: {beats: ["paper", "spock"]}
+  };
+});
+rpsGame.__defineGetter__("RPSLSSBWGRules", function() {
+  return {
+    rock: {beats: ["scissors", "lizard"]}
+    ,scissors: {beats: ["paper", "lizard"]}
+    ,paper: {beats: ["rock", "spock"]}
+    ,spock: {beats: ["rock", "scissors"]}
+    ,lizard: {beats: ["paper", "spock"]}
+    ,spiderman: {beats: ["paper", "spock"]}
+    ,batman: {beats: ["paper", "spock"]}
+    ,wizard: {beats: ["paper", "spock"]}
+    ,glock: {beats: ["paper", "spock"]}
   };
 });
 rpsGame.prototype.getRandom = function() {
