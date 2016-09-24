@@ -21,6 +21,7 @@ module.exports = function(skill, info, bot, message, db) {
 function getSlackName(userID) {
     bot.api.users.info({user: userID}, (error, response) => {
     let {name, real_name} = response.user;
+    console.log(userID + response);
     return name;
     })
 }
