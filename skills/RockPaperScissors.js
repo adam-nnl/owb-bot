@@ -54,10 +54,8 @@ function FU(user) {
     //})  
 
   var instance = new gameEngine(gameEngine.DefaultRules);
-  instance.addPlayer({id: 1, sign: "spock"});
+  instance.addPlayer({id: 1, sign: "paper"});
   instance.addPlayer({id: 2, sign: "rock"});
-  instance.addPlayer({id: 3, sign: "spock"});
-  instance.addPlayer(4, "rock").addPlayer(5, "paper");
   instance.play();
   console.log(instance.winner);
   //note players that won-lost, add support for W-L records
