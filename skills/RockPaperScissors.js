@@ -25,7 +25,7 @@ function getSlackName(userID) {
     slackName = response.user.real_name.toString();
     })
     
-    return slackName;
+    return slackName
 }
 
 function FU(user) {
