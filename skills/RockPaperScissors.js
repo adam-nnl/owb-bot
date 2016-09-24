@@ -23,6 +23,8 @@ function getSlackName(userID) {
         console.log(response.user.real_name);
     return response.user.real_name.toString();
     })
+       console.log(response.user.real_name);
+    return response.user.real_name.toString();
 }
 
 function FU(user) {
