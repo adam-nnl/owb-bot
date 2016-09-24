@@ -22,7 +22,7 @@ function getSlackName(userID) {
     var slackName = '';
     bot.api.users.info({user: userID}, (error, response) => {
     console.log(response.user.real_name);
-    slackName = response.user.real_name.toString();
+    slackName = slackName + response.user.real_name;
     })
     
     return slackName;
