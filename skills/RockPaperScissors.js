@@ -19,7 +19,7 @@ module.exports = function(skill, info, bot, message, db) {
   }
 
 function getSlackName(userID) {
-    let slackName = '';
+    var slackName;
     bot.api.users.info({user: userID}, (error, response) => {
     console.log(response.user.real_name);
     slackName = JSON.stringify(response.user.name);
