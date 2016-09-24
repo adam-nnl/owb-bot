@@ -3,18 +3,20 @@ module.exports = function(skill, info, bot, message, db) {
     console.log('messaage text: ' + message.text);
     console.log('userdata' + userData);
   if (userData) {
-    // if there is a user named send ze hugs!
+    // if there is a user is mentioned initiate the challenge!
     //for (var i = 0, len = userData.length; i < len; i++) {
         //FU(userData[i].replace(/[^\w\s]/gi, ''));
         //console.log('userdata[i]' + userData[i]);
         //console.log('userdata[i]' + userData[i].replace(/[^\w\s]/gi, ''));
     //}  
     console.log(userData[0].replace(/[^\w\s]/gi, ''));
-    bot.reply(message, getSlackName(message.user.replace(/[^\w\s]/gi, '')) + ' has challenged ' + getSlackName(userData[0].replace(/[^\w\s]/gi, ''))); 
+    var challenger = getSlackName(message.user.replace(/[^\w\s]/gi, ''));
+    var challenged = getSlackName(userData[0].replace(/[^\w\s]/gi, ''));
+    bot.reply(message, challenger + ' has challenged ' + challenged); 
 
     
     //bot.reply(message,'Let\'s rumble' + userData[0].replace(/[^\w\s]/gi, ''));
-  } else {
+  } else {//if no user challenged
     bot.reply(message, 'You didn\'t challenge anyone you chicken shit! :chicken: :poop:');
   }
 
