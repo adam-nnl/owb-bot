@@ -14,31 +14,25 @@ module.exports = function(skill, info, bot, message, db) {
     bot.reply(message, 'You didn\'t challenge anyone you chicken shit! :chicken: :poop:');
   }
 
-function getSlackName(userID) {
-    var slackName
-    bot.api.users.info({user: userID}, (error, response) => {
-    console.log('response name: ' + response.user.real_name);
-    console.log('Slackname: ' + response.user.real_name.toString());
-    slackName = response.user.real_name.toString();
-    })
-    return slackName;
-}
-
-function FU(user) {
-    //DM some shade!
+function playerShoot(user) {
+    //DM the players for thier  moves
     bot.api.im.open({ user: user }, function (err, response) {
       if (err) {
         return console.log(err)
       }
-    var fuckArray = [
-    'https://giphy.com/gifs/cheezburger-olympics-U7P2vnWfPkIQ8',
-    'https://giphy.com/gifs/louis-ck-middle-finger-fuck-you-Qd71uU3LzyxXO'
+    var encouragementArray = [
+    'I believe in you!',
+    'I\'m sure you\'ll do your best!',
+    'you\'re already a winner in my book!',
+    'nothing can stop you!',
+    'if you lose, don\'t bother coming home.',
+    'nothing can conquer your indomitable spirit!'
     ];
-    var randomFuck = Math.floor(Math.random()* fuckArray.length);    
+    var randomEncouragement = Math.floor(Math.random()* encouragementArray.length);    
 
-    var dmChannel = response.channel.id
-    bot.say({channel: dmChannel, text: 'Someone is throwing shade your way... :middle_finger:'})
-    bot.say({channel: dmChannel, text: fuckArray[randomFuck]})
+    var dmChannel = response.channel.id;
+    var positiveVibes = 'What do you want to play? *Rock*, *Paper* or *Scissors*? Not matter what you choose, just remember ' + encouragementArray[randomEncouragement];
+    bot.say({channel: dmChannel, text: positiveVibes});
     })    
     
     
