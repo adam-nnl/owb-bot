@@ -14,7 +14,11 @@ module.exports = function(skill, info, bot, message, db) {
         //console.log('userdate[i]' + userData[i].replace(/[^\w\s]/gi, ''));
     //}  
     //console.log(userData);
-    bot.reply(message,'Let\'s rumble' + userData[0].replace(/[^\w\s]/gi, ''));
+    bot.api.users.info({user: userData[0]}, (error, response) => {let {challengedNme, challengedReal_name} = response.user;
+       bot.reply(message,'Let\'s rumble ' + challengedReal_name); 
+    }
+    
+    //bot.reply(message,'Let\'s rumble' + userData[0].replace(/[^\w\s]/gi, ''));
   } else {
     bot.reply(message, 'You didn\'t challenge anyone you chicken shit! :chicken: :poop:');
   }
