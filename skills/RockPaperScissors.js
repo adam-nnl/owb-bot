@@ -1,44 +1,13 @@
 module.exports = function(skill, info, bot, message, db) {
-    var userData = message.text.match(/\<(.*?)\>/g);
-    console.log('messaage text: ' + message.text);
-    console.log('userdata' + userData);
+    var userData = message.text.match(/\<(.*?)\>/g);  //suss out any @mentions of users
   if (userData) {
     // if there is a user is mentioned initiate the challenge!
-    //for (var i = 0, len = userData.length; i < len; i++) {
-        //FU(userData[i].replace(/[^\w\s]/gi, ''));
-        //console.log('userdata[i]' + userData[i]);
-        //console.log('userdata[i]' + userData[i].replace(/[^\w\s]/gi, ''));
-    //}  
-    console.log(userData[0].replace(/[^\w\s]/gi, ''));
-    var challenger = 'challenger';    
-    var challenged = 'challenged';
-    //bot.api.users.info({user: message.user}, (error, response) => {
-    //console.log('response name: ' + response.user.real_name);
-    //console.log('Slackname: ' + response.user.real_name.toString());
-    //challenger = response.user.real_name.toString();
-    //});
-    bot.api.users.info({user: userData[0].replace(/[^\w\s]/gi, '')}, (error, response) => {
-    //console.log('response name: ' + response.user.real_name);
-    //console.log('Slackname: ' + response.user.real_name.toString());
-    challenged = response.user.real_name.toString();
-    console.log(challenged);
-    });
-    
-    bot.api.users.info({user: message.user}, function(err, res) {
-        if (err) {
-            bot.botkit.log(':(', err);
-        }
-        challenger = res.user.real_name.toString();
-        console.log(challenger);
-    });
-    
-    
-    //var challenger = new getSlackName(message.user);//.replace(/[^\w\s]/gi, ''));
-    //var challenged = new getSlackName(userData[0].replace(/[^\w\s]/gi, ''));
-    console.log(challenger);
-    console.log(challenged);
-    bot.reply(message, challenger + ' has challenged ' + challenged); 
+    //console.log(userData[0].replace(/[^\w\s]/gi, ''));
+    var challenged = userData[0].replace(/[^\w\s]/gi, '');
 
+    bot.api.users.info({user: challenged}, (error, response) => {
+        bot.reply(message, response.user.name + ' you have been challenged to a game of ROCK , PAPER , SCISSORS by ' + message.user + '! Prepare to defend your honor!'); 
+    });
     
     //bot.reply(message,'Let\'s rumble' + userData[0].replace(/[^\w\s]/gi, ''));
   } else {//if no user challenged
