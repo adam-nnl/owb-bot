@@ -21,10 +21,12 @@ module.exports = function(skill, info, bot, message, db) {
   }
 
 function getSlackName(userID) {
-    var slackName;
+    //var slackName;
     bot.api.users.info({user: userID}, (error, response) => {
+    var t = JSON.parse(response.user);
+    //alert(t['jobtitel'])
     console.log(response.user.real_name);
-    return response.user.real_name;
+    return t['real_name'];
     //slackName = JSON.stringify(response.user.name);
     })
     //console.log('slackname: ' + slackName)
@@ -56,9 +58,9 @@ function FU(user) {
   
   var gameEngine = require('./Rock-Paper-Spock');
   
-    bot.api.users.info({user: message.user}, (error, response) => {
+    //bot.api.users.info({user: message.user}, (error, response) => {
         //bot.reply(message, 'Rock Paper Scissors (lizard, spock, spiderman, batman, wizard, glock?)');
-    })  
+    //})  
 
   var instance = new gameEngine(gameEngine.DefaultRules);
   instance.addPlayer({id: 1, sign: "spock"});
