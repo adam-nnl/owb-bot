@@ -10,7 +10,7 @@ module.exports = function(skill, info, bot, message, db) {
         //console.log('userdata[i]' + userData[i].replace(/[^\w\s]/gi, ''));
     //}  
     console.log(userData[0].replace(/[^\w\s]/gi, ''));
-    bot.reply(message, getSlackName(message.user.replace(/[^\w\s]/gi, '').toString()) + ' has challenged ' + getSlackName(userData[0].replace(/[^\w\s]/gi, ''))); 
+    bot.reply(message, getSlackName(message.user.replace(/[^\w\s]/gi, '') + ' has challenged ' + getSlackName(userData[0].replace(/[^\w\s]/gi, ''))); 
 
     
     //bot.reply(message,'Let\'s rumble' + userData[0].replace(/[^\w\s]/gi, ''));
@@ -19,12 +19,13 @@ module.exports = function(skill, info, bot, message, db) {
   }
 
 function getSlackName(userID) {
+    var slackName = '';
     bot.api.users.info({user: userID}, (error, response) => {
-        console.log(response.user.real_name);
-    return response.user.real_name.toString();
+    console.log(response.user.real_name);
+    slackName = response.user.real_name.toString();
     })
-       console.log(response.user.real_name);
-    return response.user.real_name.toString();
+    
+    return slackName;
 }
 
 function FU(user) {
