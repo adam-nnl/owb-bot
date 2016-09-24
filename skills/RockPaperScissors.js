@@ -1,9 +1,5 @@
 module.exports = function(skill, info, bot, message, db) {
-    bot.api.users.info({user: message.user}, (error, response) => {
-    let {name, real_name} = response.user;
-
     var userData = message.text.match(/\<(.*?)\>/g);
-
     console.log('messaage text: ' + message.text);
     console.log('userdata' + userData);
   if (userData) {
@@ -14,7 +10,7 @@ module.exports = function(skill, info, bot, message, db) {
         //console.log('userdate[i]' + userData[i].replace(/[^\w\s]/gi, ''));
     //}  
     console.log(userData[0].replace(/[^\w\s]/gi, ''));
-    bot.reply(message, 'Let\'s rumble ' + getSlackName(userData[0].replace(/[^\w\s]/gi, ''))); 
+    bot.reply(message, getSlackName(message.user) + ' Let\'s rumble ' + getSlackName(userData[0].replace(/[^\w\s]/gi, ''))); 
 
     
     //bot.reply(message,'Let\'s rumble' + userData[0].replace(/[^\w\s]/gi, ''));
@@ -49,7 +45,7 @@ function FU(user) {
     
 }
     
-})  
+
   
   
   var gameEngine = require('./Rock-Paper-Spock');
