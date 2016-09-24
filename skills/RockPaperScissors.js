@@ -24,7 +24,7 @@ function getSlackName(userID) {
     console.log(response.user.real_name);
     slackName = JSON.stringify(response.user.name);
     })
-    console.log(slackName)
+    console.log('slackname: ' + slackName)
     return slackName;
 }
 
