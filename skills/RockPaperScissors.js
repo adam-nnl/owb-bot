@@ -10,8 +10,8 @@ module.exports = function(skill, info, bot, message, db) {
         //console.log('userdata[i]' + userData[i].replace(/[^\w\s]/gi, ''));
     //}  
     console.log(userData[0].replace(/[^\w\s]/gi, ''));
-    var challenger;    
-    var challenged;
+    var challenger = 'challenger';    
+    var challenged = 'challenged';
     bot.api.users.info({user: message.user}, (error, response) => {
     //console.log('response name: ' + response.user.real_name);
     //console.log('Slackname: ' + response.user.real_name.toString());
