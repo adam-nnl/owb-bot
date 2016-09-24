@@ -27,7 +27,7 @@ module.exports = function(skill, info, bot, message, db) {
         if (err) {
             bot.botkit.log(':(', err);
         }
-        challenger = response.user.real_name.toString();
+        challenger = res.user.real_name.toString();
     });
     
     
