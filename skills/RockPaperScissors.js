@@ -16,12 +16,12 @@ module.exports = function(skill, info, bot, message, db) {
     //console.log('response name: ' + response.user.real_name);
     //console.log('Slackname: ' + response.user.real_name.toString());
     challenger = response.user.real_name.toString();
-    })    
+    });
     bot.api.users.info({user: userData[0].replace(/[^\w\s]/gi, '')}, (error, response) => {
     //console.log('response name: ' + response.user.real_name);
     //console.log('Slackname: ' + response.user.real_name.toString());
     challenged = response.user.real_name.toString();
-    })    
+    });  
     
     
     //var challenger = new getSlackName(message.user);//.replace(/[^\w\s]/gi, ''));
