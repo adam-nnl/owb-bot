@@ -28,6 +28,8 @@ Added built-in functions:
 * SecretHug: send love to other users via gifs
 * SecretFU: send shade to other users via gifs
 * RPS: rock, paper, scissors (in progress)
+* RPSLS: 
+* RPSLSSBWG: 
 * Jeopardy: Jeopardy game (in progress)
 * ????
 
