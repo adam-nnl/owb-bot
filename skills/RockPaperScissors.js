@@ -16,7 +16,7 @@ module.exports = function(skill, info, bot, message, db) {
     //console.log(userData);
     bot.reply(message,'Let\'s rumble' + userData[1].replace(/[^\w\s]/gi, ''));
   } else {
-    bot.reply(message, 'You didn\'t challenge anyone you chickenshit');
+    bot.reply(message, 'You didn\'t challenge anyone you chicken shit! :chicken: :poop:');
   }
 
 function FU(user) {
