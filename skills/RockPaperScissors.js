@@ -21,6 +21,7 @@ module.exports = function(skill, info, bot, message, db) {
     //console.log('response name: ' + response.user.real_name);
     //console.log('Slackname: ' + response.user.real_name.toString());
     challenged = response.user.real_name.toString();
+    console.log(challenged);
     });
     
     bot.api.users.info({user: message.user}, function(err, res) {
@@ -28,6 +29,7 @@ module.exports = function(skill, info, bot, message, db) {
             bot.botkit.log(':(', err);
         }
         challenger = res.user.real_name.toString();
+        console.log(challenger);
     });
     
     
