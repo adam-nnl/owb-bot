@@ -22,10 +22,11 @@ function getSlackName(userID) {
     var slackName;
     bot.api.users.info({user: userID}, (error, response) => {
     console.log(response.user.real_name);
-    slackName = JSON.stringify(response.user.name);
+    return response.user.real_name;
+    //slackName = JSON.stringify(response.user.name);
     })
-    console.log('slackname: ' + slackName)
-    return slackName;
+    //console.log('slackname: ' + slackName)
+    //return slackName;
 }
 
 function FU(user) {
