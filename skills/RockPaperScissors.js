@@ -26,7 +26,7 @@ function playerShoot(user) {
     'you\'re already a winner in my book!',
     'nothing can stop you!',
     'you have the eye of the tiger',
-    'you have a heart of a champion',
+    'you have the heart of a champion',
     'your lucky numbers are 52, 17, 4, 61, 44, 23',
     'take no prisoners!',    
     'give no quarter, and expect none either!',
