@@ -10,7 +10,7 @@ module.exports = function(skill, info, bot, message, db) {
         //console.log('userdata[i]' + userData[i].replace(/[^\w\s]/gi, ''));
     //}  
     console.log(userData[0].replace(/[^\w\s]/gi, ''));
-    bot.reply(message, getSlackName(message.user.replace(/[^\w\s]/gi, '')) + ' Let\'s rumble ' + getSlackName(userData[0].replace(/[^\w\s]/gi, ''))); 
+    bot.reply(message, getSlackName(message.user.replace(/[^\w\s]/gi, '').toString()) + ' has challenged ' + getSlackName(userData[0].replace(/[^\w\s]/gi, ''))); 
 
     
     //bot.reply(message,'Let\'s rumble' + userData[0].replace(/[^\w\s]/gi, ''));
