@@ -6,8 +6,8 @@ module.exports = function(skill, info, bot, message, db) {
     // if there is a user named send ze hugs!
     //for (var i = 0, len = userData.length; i < len; i++) {
         //FU(userData[i].replace(/[^\w\s]/gi, ''));
-        //console.log('userdate[i]' + userData[i]);
-        //console.log('userdate[i]' + userData[i].replace(/[^\w\s]/gi, ''));
+        //console.log('userdata[i]' + userData[i]);
+        //console.log('userdata[i]' + userData[i].replace(/[^\w\s]/gi, ''));
     //}  
     console.log(userData[0].replace(/[^\w\s]/gi, ''));
     bot.reply(message, getSlackName(message.user.replace(/[^\w\s]/gi, '')) + ' Let\'s rumble ' + getSlackName(userData[0].replace(/[^\w\s]/gi, ''))); 
@@ -21,7 +21,7 @@ module.exports = function(skill, info, bot, message, db) {
 function getSlackName(userID) {
     bot.api.users.info({user: userID}, (error, response) => {
     let {name, real_name} = response.user;
-    return real_name;
+    return name;
     })
 }
 
