@@ -10,8 +10,22 @@ module.exports = function(skill, info, bot, message, db) {
         //console.log('userdata[i]' + userData[i].replace(/[^\w\s]/gi, ''));
     //}  
     console.log(userData[0].replace(/[^\w\s]/gi, ''));
-    var challenger = new getSlackName(message.user);//.replace(/[^\w\s]/gi, ''));
-    var challenged = new getSlackName(userData[0].replace(/[^\w\s]/gi, ''));
+    var challenger    
+    var challenged
+    bot.api.users.info({user: message.user}, (error, response) => {
+    //console.log('response name: ' + response.user.real_name);
+    //console.log('Slackname: ' + response.user.real_name.toString());
+    challenger = response.user.real_name.toString();
+    })    
+    bot.api.users.info({user: userData[0].replace(/[^\w\s]/gi, '')}, (error, response) => {
+    //console.log('response name: ' + response.user.real_name);
+    //console.log('Slackname: ' + response.user.real_name.toString());
+    challenged = response.user.real_name.toString();
+    })    
+    
+    
+    //var challenger = new getSlackName(message.user);//.replace(/[^\w\s]/gi, ''));
+    //var challenged = new getSlackName(userData[0].replace(/[^\w\s]/gi, ''));
     console.log(challenger);
     console.log(challenged);
     bot.reply(message, challenger + ' has challenged ' + challenged); 
