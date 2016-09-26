@@ -46,6 +46,70 @@ function playerShoot(user) {
     
 }
     
+function privateConvo(bot, message) {
+  const { user, channel } = message;
+
+  return (err, convo) => {
+    if (err) throw err;
+
+    convo.ask('Do you want to play `paper`, `rock`, or `scissors`?', [
+      {
+        pattern: 'paper|rock|scissors',
+        callback(response, convo) {
+          // since no further messages are queued after this,
+          // the conversation will end naturally with status === 'completed'
+          convo.next();
+        },
+      }, {
+        default: true,
+        callback(response, convo) {
+          convo.repeat();
+          convo.next();
+        },
+      },
+    ], { key: 'rockPaperScissors' }); // store the results in a field called rockPaperScissors
+
+    convo.on('end', (convo) => {
+      if (convo.status === 'completed') {
+        const prc = convo.extractResponse('rockPaperScissors');
+
+        channels.get(channel, (err, data) => {
+          if (err) throw err;
+
+          const updateData = data;
+          updateData.players[user].played = prc;
+
+          const { players } = updateData;
+          const playerIDs = Object.keys(players);
+
+          // check if only one player has played
+          const onlyOnePlayed = playerIDs.find((id) => players[id].played === '');
+
+          if (onlyOnePlayed) {
+            channels.save(updateData, (err) => {
+              if (err) throw err;
+
+              bot.reply(message, `<@${user}> has played!`);
+            });
+          } else {
+            const gameResults = playerIDs.map((id) => `<@${id}> played ${players[id].played}`);
+
+            bot.reply(message, gameResults.join(' & '));
+
+            // reset the game data
+            channels.save({ id: updateData.id }, (err) => {
+              if (err) throw err;
+            });
+          }
+        });
+      } else {
+        // this happens if the conversation ended prematurely for some reason
+        bot.reply(message, 'OK, nevermind!');
+      }
+    });
+  };
+}
+    
 
   
   
