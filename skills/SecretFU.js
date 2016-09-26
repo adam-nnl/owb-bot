@@ -39,6 +39,7 @@ function FU(user) {
     'https://giphy.com/gifs/F9zavqlooT63C',
     'https://giphy.com/gifs/9JWWMAbUoAtH2',
     'https://giphy.com/gifs/middle-finger-martina-hill-10Pj0OFiQieaf6',
+    'http://www.reactiongifs.com/r/mr_rogers.gif',    
     'https://giphy.com/gifs/louis-ck-middle-finger-fuck-you-Qd71uU3LzyxXO'
     ];
     var randomFuck = Math.floor(Math.random()* fuckArray.length);    
