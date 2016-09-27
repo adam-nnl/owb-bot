@@ -20,10 +20,7 @@ Ears.prototype.listen = function() {
   console.log('TOKEN: ' + this.token);
   this.bot = Bot.spawn({
     token: this.token
-  }).startRTM(){
-    if (err) {
-        throw new Error(err);
-    }
+  }).startRTM();
 
     // @ https://api.slack.com/methods/users.list
     bot.api.users.list({}, function (err, response) {
@@ -37,7 +34,6 @@ Ears.prototype.listen = function() {
         }
     });
   return this;
-}
 }
 
 Ears.prototype.hear = function(pattern, callback) {
