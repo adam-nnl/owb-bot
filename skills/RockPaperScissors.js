@@ -1,5 +1,5 @@
 module.exports = function(skill, info, bot, message, db) {
-  db.save(message.channel, 'test', function(err, id){
+  db.save(message.team, 'test:test', function(err, id){
   // id is a unique ID
     });
   var userData = message.text.match(/\<(.*?)\>/g);  //suss out any @mentions of users
@@ -11,7 +11,8 @@ module.exports = function(skill, info, bot, message, db) {
         bot.reply(message, ':rotating_light: @' + response.user.name + ' you have been challenged to a game of ROCK:mountain: , PAPER:spiral_note_pad: , SCISSORS:scissors:! Prepare to defend your honor!'); 
     });
     bot.startPrivateConversation(message, privateConvo(bot, message));
-  } else {//if no user challenged
+  } else {
+    //if no user challenged
     bot.reply(message, 'You didn\'t challenge anyone you chicken shit! :chicken: :poop:');
   }
 
@@ -73,7 +74,7 @@ function privateConvo(bot, message) {
       if (convo.status === 'completed') {
         const prc = convo.extractResponse('rockPaperScissors');
 
-        db.get(message.channel, (err, data) => {
+        db.get(message.team, (err, data) => {
           if (err) throw err;
 
           const updateData = data;
@@ -85,13 +86,13 @@ function privateConvo(bot, message) {
           // check if only one player has played
           const onlyOnePlayed = playerIDs.find((id) => players[id].played === '');
 
-          if (onlyOnePlayed) {
+          if (onlyOnePlayed) { //SWAP THIS LOGIC to support RPSSLSBSWG if all players have played!
             db.save(updateData, (err) => {
               if (err) throw err;
 
               bot.reply(message, `<@${user}> has played!`);
             });
-          } else {
+          } else { //record player enter, note in channel
             const gameResults = playerIDs.map((id) => `<@${id}> played ${players[id].played}`);
 
             bot.reply(message, gameResults.join(' & '));
