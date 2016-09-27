@@ -74,7 +74,7 @@ function privateConvo(bot, message) {
       if (convo.status === 'completed') {
         const prc = convo.extractResponse('rockPaperScissors');
 
-        channels.get(channel, (err, data) => {
+        db.get(channel, (err, data) => {
           if (err) throw err;
 
           const updateData = data;
@@ -87,7 +87,7 @@ function privateConvo(bot, message) {
           const onlyOnePlayed = playerIDs.find((id) => players[id].played === '');
 
           if (onlyOnePlayed) {
-            channels.save(updateData, (err) => {
+            db.save(updateData, (err) => {
               if (err) throw err;
 
               bot.reply(message, `<@${user}> has played!`);
@@ -98,7 +98,7 @@ function privateConvo(bot, message) {
             bot.reply(message, gameResults.join(' & '));
 
             // reset the game data
-            channels.save({ id: updateData.id }, (err) => {
+            db.save({ id: updateData.id }, (err) => {
               if (err) throw err;
             });
           }
