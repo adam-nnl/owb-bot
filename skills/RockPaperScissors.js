@@ -71,7 +71,7 @@ function privateConvo(bot, message) {
       if (convo.status === 'completed') {
         const prc = convo.extractResponse('rockPaperScissors');
 
-        db.get(channel, (err, data) => {
+        db.get(message.channel, (err, data) => {
           if (err) throw err;
 
           const updateData = data;
