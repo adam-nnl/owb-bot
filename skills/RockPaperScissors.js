@@ -1,5 +1,5 @@
 module.exports = function(skill, info, bot, message, db) {
-  var id = db.saveSync(message.team,{foo:{bar:"baz"}});
+  //var id = db.saveSync(message.team,{foo:{bar:"baz"}});
   //db.save(message.team, 'test:test', function(err, id){
   // id is a unique ID
   //  });
@@ -75,7 +75,7 @@ function privateConvo(bot, message) {
       if (convo.status === 'completed') {
         const prc = convo.extractResponse('rockPaperScissors');
 
-        db.get(message.team, (err, data) => {
+        db.get(message.user, (err, data) => {
           if (err) throw err;
 
           const updateData = data;
