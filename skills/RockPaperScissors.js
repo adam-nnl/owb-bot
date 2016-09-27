@@ -5,15 +5,12 @@ module.exports = function(skill, info, bot, message, db) {
   var userData = message.text.match(/\<(.*?)\>/g);  //suss out any @mentions of users
   if (userData) {
     // if there is a user is mentioned initiate the challenge!
-    //console.log(userData[0].replace(/[^\w\s]/gi, ''));
     var challenged = userData[0].replace(/[^\w\s]/gi, '');
 
     bot.api.users.info({user: challenged}, (error, response) => {
         bot.reply(message, ':rotating_light: @' + response.user.name + ' you have been challenged to a game of ROCK:mountain: , PAPER:spiral_note_pad: , SCISSORS:scissors:! Prepare to defend your honor!'); 
     });
-    //playerShoot(message.user);
     bot.startPrivateConversation(message, privateConvo(bot, message));
-    //bot.reply(message,'Let\'s rumble' + userData[0].replace(/[^\w\s]/gi, ''));
   } else {//if no user challenged
     bot.reply(message, 'You didn\'t challenge anyone you chicken shit! :chicken: :poop:');
   }
@@ -37,6 +34,12 @@ function privateConvo(bot, message) {
     'Paper! No- Rock! No Wait! Scissors; I made things worse, sorry.',
     'Shoot them signs junior!',
     'Paper is on a roll!',
+    'Get it. GET IT!',
+    'You go this.',
+    'like a boss.',
+    'Establish dominance!',
+    'what is best in life- Crush your enemies. See them driven before you. Hear the lamentations of their women.',
+    'Rock it, or paper it? or _scissors_ it?'  
     'Cut em with scissors!',
     'Steady like a rock!',    
     'give no quarter, and expect none either!',
