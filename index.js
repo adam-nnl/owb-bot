@@ -34,7 +34,7 @@ eachKey(builtinPhrases, Bottie.Teach);
 Bottie.Brain.think();
 console.log('Bot finished learning, time to listen...');
 Bottie.Ears
-  .listen()
+  .listen(db)
   .hear('!TRAIN', function(speech, message) {
     console.log('Delegating to on-the-fly training module...');
     Train(Bottie.Brain, speech, message);
