@@ -1,5 +1,4 @@
 var BotKit = require('botkit');
-var teamID = '';
 module.exports = Ears;
 
 var Bot = BotKit.slackbot({
@@ -22,19 +21,13 @@ Ears.prototype.listen = function(db) {
     token: this.token
   }).startRTM();
 
-           this.bot.api.team.info((error, response) => {
-              teamID = response.id;
-             console.log(teamID);
-            });    
-  
     // @ https://api.slack.com/methods/users.list
     this.bot.api.users.list({}, function (err, response) {
         if (response.hasOwnProperty('members') && response.ok) {
             var total = response.members.length;
             for (var i = 0; i < total; i++) {
                 var member = response.members[i];
-                console.log(teamID);
-                var id = db.saveSync(teamID, {name: member.name, id: member.id});
+                var id = db.saveSync({name: member.name, id: member.id});
                 //fullTeamList.push({name: member.name, id: member.id});
             }
         }
