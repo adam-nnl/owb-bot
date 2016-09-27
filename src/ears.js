@@ -24,12 +24,6 @@ Ears.prototype.listen = function() {
   return this;
 }
 
-Ears.prototype.snoop = function(db) {
-    bot.api.users.info({user: challenged}, (error, response) => {
-        //for-loop store usernames/id for quick ref 
-    });
-};
-
 Ears.prototype.hear = function(pattern, callback) {
   Bot.hears(pattern, this.scopes, callback);
   return this;
