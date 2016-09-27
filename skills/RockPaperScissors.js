@@ -1,8 +1,5 @@
 module.exports = function(skill, info, bot, message, db) {
-    var channelID = {
-    channel: "bar"
-    };  
-  db.save(channelID, function(err, id){
+  db.save(message.channel, '', function(err, id){
   // id is a unique ID
     });
   var userData = message.text.match(/\<(.*?)\>/g);  //suss out any @mentions of users
