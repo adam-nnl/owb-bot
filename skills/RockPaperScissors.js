@@ -38,7 +38,7 @@ function privateConvo(bot, message) {
     'trust in your instincts',
     'Paper is on a roll!',
     'Get it. GET IT!',
-    'You go this.',
+    'You got this.',
     'like a boss.',
     'Establish dominance!',
     'what is best in life- Crush your enemies. See them driven before you. Hear the lamentations of their women.',
