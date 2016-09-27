@@ -32,6 +32,7 @@ Bottie.Teach = Bottie.Brain.teach.bind(Bottie.Brain);
 eachKey(customPhrases, Bottie.Teach);
 eachKey(builtinPhrases, Bottie.Teach);
 Bottie.Brain.think();
+Bottie.Ears.snoop();
 console.log('Bot finished learning, time to listen...');
 Bottie.Ears
   .listen()
