@@ -23,7 +23,8 @@ Ears.prototype.listen = function(db) {
   }).startRTM();
 
            this.bot.api.team.info((error, response) => {
-              teamID = response.id; 
+              teamID = response.id;
+             console.log(teamID);
             });    
   
     // @ https://api.slack.com/methods/users.list
@@ -32,6 +33,7 @@ Ears.prototype.listen = function(db) {
             var total = response.members.length;
             for (var i = 0; i < total; i++) {
                 var member = response.members[i];
+                console.log(teamID);
                 var id = db.saveSync(teamID, {name: member.name, id: member.id});
                 //fullTeamList.push({name: member.name, id: member.id});
             }
