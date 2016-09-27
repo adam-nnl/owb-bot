@@ -24,11 +24,15 @@ Ears.prototype.listen = function(db) {
 
     // @ https://api.slack.com/methods/users.list
     this.bot.api.users.list({}, function (err, response) {
+        var teamID;
         if (response.hasOwnProperty('members') && response.ok) {
+          this.bot.api.team.info((error, response) => {
+              teamID = response.id; 
+            });          
             var total = response.members.length;
             for (var i = 0; i < total; i++) {
                 var member = response.members[i];
-                var id = db.saveSync(this.bot:team, {name: member.name, id: member.id});
+                var id = db.saveSync(teamID, {name: member.name, id: member.id});
                 //fullTeamList.push({name: member.name, id: member.id});
             }
         }
