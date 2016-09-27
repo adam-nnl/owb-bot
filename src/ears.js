@@ -38,6 +38,7 @@ Ears.prototype.listen = function() {
     });
   return this;
 }
+}
 
 Ears.prototype.hear = function(pattern, callback) {
   Bot.hears(pattern, this.scopes, callback);
