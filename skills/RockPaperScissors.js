@@ -31,8 +31,10 @@ function privateConvo(bot, message) {
     'your lucky numbers are ' + rnd + ', ' + rnd + ', ' + rnd + ', ' + rnd + ', ' + rnd + '.',
     'take no prisoners!',
     'Rock! On second thought- Paper! No Wait! Scissors...actually IDK',
-    'Paper! No- Rock! No Wait! Scissors; I made things worse, sorry.',
-    'Shoot them signs junior!',
+    'Paper! NO, Rock! No Wait! Scissors; I made things worse, sorry.',
+    'shoot straight!',
+    'trust the force.',
+    'trust in your instincts',
     'Paper is on a roll!',
     'Get it. GET IT!',
     'You go this.',
@@ -44,13 +46,13 @@ function privateConvo(bot, message) {
     'Steady like a rock!',    
     'give no quarter, and expect none either!',
     'no retreat, no surrender!', 
-    'I\'m not friends with losers, so try not to lose, eh?',     
+    'I\'m not friends with losers- so try not to lose, eh?',     
     'If you\'re not first you\'re last!',        
     'if you lose, don\'t bother coming home.',
     'nothing can conquer your indomitable spirit!'
     ];
     var randomEncouragement = Math.floor(Math.random()* encouragementArray.length); 
-    convo.ask('Do you want to play `paper`, `rock`, or `scissors`? No matter what you choose, just remember- ' + encouragementArray[randomEncouragement], [
+    convo.ask('Do you want to play `paper`, `rock`, or `scissors`? No matter what you choose, just remember, ' + encouragementArray[randomEncouragement], [
       {
         pattern: 'paper|rock|scissors',
         callback(response, convo) {
