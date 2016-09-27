@@ -58,8 +58,24 @@ function privateConvo(bot, message) {
 
   return (err, convo) => {
     if (err) throw err;
-
-    convo.ask('Do you want to play `paper`, `rock`, or `scissors`?', [
+    var encouragementArray = [
+    'I believe in you!',
+    'I\'m sure you\'ll do your best!',
+    'you\'re already a winner in my book!',
+    'nothing can stop you!',
+    'you have the eye of the tiger',
+    'you have the heart of a champion',
+    'your lucky numbers are 52, 17, 4, 61, 44, 23',
+    'take no prisoners!',    
+    'give no quarter, and expect none either!',
+    'no retreat, no surrender!', 
+    'I\'m not friends with losers, so try not to lose, eh?',     
+    'If you\'re not first you\'re last!',        
+    'if you lose, don\'t bother coming home.',
+    'nothing can conquer your indomitable spirit!'
+    ];
+    var randomEncouragement = Math.floor(Math.random()* encouragementArray.length); 
+    convo.ask('Do you want to play `paper`, `rock`, or `scissors`? No matter what you choose, just remember- '+ encouragementArray[randomEncouragement], [
       {
         pattern: 'paper|rock|scissors',
         callback(response, convo) {
