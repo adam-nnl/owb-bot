@@ -1,4 +1,3 @@
-
 var fs = require('fs');
 
 var Train = require('./src/train');
@@ -28,12 +27,12 @@ try {
     'not valid JSON! Fix it, please? :)');
 }
 
-console.log('Bottie is learning...');
+console.log('Bot is learning...');
 Bottie.Teach = Bottie.Brain.teach.bind(Bottie.Brain);
 eachKey(customPhrases, Bottie.Teach);
 eachKey(builtinPhrases, Bottie.Teach);
 Bottie.Brain.think();
-console.log('Bottie finished learning, time to listen...');
+console.log('Bot finished learning, time to listen...');
 Bottie.Ears
   .listen()
   .hear('!TRAIN', function(speech, message) {
@@ -42,14 +41,14 @@ Bottie.Ears
   })
   .hear('.*', function(speech, message) {
     var interpretation = Bottie.Brain.interpret(message.text);
-    console.log('Bottie heard: ' + message.text);
-    console.log('Bottie interpretation: ', interpretation);
+    console.log('Bot heard: ' + message.text);
+    console.log('Bot interpretation: ', interpretation);
     if (interpretation.guess) {
       console.log('Invoking skill: ' + interpretation.guess);
       Bottie.Brain.invoke(interpretation.guess, interpretation, speech, message, db);
     } else {
-      speech.reply(message, 'Hmm... I couldn\'t tell what you said...');
-      speech.reply(message, '```\n' + JSON.stringify(interpretation) + '\n```');
+      speech.reply(message, 'Hmm... I couldn\'t tell what you said...DM me `help` for a list of my commands and keywords');
+      //speech.reply(message, '```\n' + JSON.stringify(interpretation) + '\n```');
     }
   });
 
