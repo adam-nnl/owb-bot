@@ -21,38 +21,6 @@ module.exports = function(skill, info, bot, message, db) {
     bot.reply(message, 'You didn\'t challenge anyone you chicken shit! :chicken: :poop:');
   }
 
-function playerShoot(user) {
-    //DM the players for thier  moves
-    bot.api.im.open({ user: user }, function (err, response) {
-      if (err) {
-        return console.log(err)
-      }
-    var encouragementArray = [
-    'I believe in you!',
-    'I\'m sure you\'ll do your best!',
-    'you\'re already a winner in my book!',
-    'nothing can stop you!',
-    'you have the eye of the tiger',
-    'you have the heart of a champion',
-    'your lucky numbers are 52, 17, 4, 61, 44, 23',
-    'take no prisoners!',    
-    'give no quarter, and expect none either!',
-    'no retreat, no surrender!', 
-    'I\'m not friends with losers, so try not to lose, eh?',     
-    'If you\'re not first you\'re last!',        
-    'if you lose, don\'t bother coming home.',
-    'nothing can conquer your indomitable spirit!'
-    ];
-    var randomEncouragement = Math.floor(Math.random()* encouragementArray.length);    
-
-    var dmChannel = response.channel.id;
-    var positiveVibes = 'What do you want to play? *Rock*, *Paper* or *Scissors*?' + '\n' + 'No matter what you choose, just remember- ' + encouragementArray[randomEncouragement];
-    bot.say({channel: dmChannel, text: positiveVibes});
-    })    
-    
-    
-}
-    
 function privateConvo(bot, message) {
   const { user, channel } = message;
 
@@ -75,7 +43,7 @@ function privateConvo(bot, message) {
     'nothing can conquer your indomitable spirit!'
     ];
     var randomEncouragement = Math.floor(Math.random()* encouragementArray.length); 
-    convo.ask('Do you want to play `paper`, `rock`, or `scissors`? No matter what you choose, just remember- '+ encouragementArray[randomEncouragement], [
+    convo.ask('Do you want to play `paper`, `rock`, or `scissors`? No matter what you choose, just remember- ' + encouragementArray[randomEncouragement], [
       {
         pattern: 'paper|rock|scissors',
         callback(response, convo) {
