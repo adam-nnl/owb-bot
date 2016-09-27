@@ -23,7 +23,7 @@ Ears.prototype.listen = function() {
   }).startRTM();
 
     // @ https://api.slack.com/methods/users.list
-    bot.api.users.list({}, function (err, response) {
+    this.bot.api.users.list({}, function (err, response) {
         if (response.hasOwnProperty('members') && response.ok) {
             var total = response.members.length;
             for (var i = 0; i < total; i++) {
