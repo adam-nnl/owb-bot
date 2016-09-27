@@ -27,7 +27,7 @@ Ears.prototype.listen = function(db) {
             var total = response.members.length;
             for (var i = 0; i < total; i++) {
                 var member = response.members[i];
-                var id = db.saveSync({name: member.name, id: member.id});
+                var id = db.saveSync('omgqtfbbq',{name: member.name, id: member.id});
                 //fullTeamList.push({name: member.name, id: member.id});
             }
         }
