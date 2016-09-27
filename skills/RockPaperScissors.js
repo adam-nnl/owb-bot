@@ -8,7 +8,8 @@ module.exports = function(skill, info, bot, message, db) {
     bot.api.users.info({user: challenged}, (error, response) => {
         bot.reply(message, ':rotating_light: ' + response.user.name + ' you have been challenged to a game of ROCK:mountain: , PAPER:spiral_note_pad: , SCISSORS:scissors:! Prepare to defend your honor!'); 
     });
-    playerShoot(message.user);
+    //playerShoot(message.user);
+    bot.startPrivateConversation(message, privateConvo(bot, message));
     //bot.reply(message,'Let\'s rumble' + userData[0].replace(/[^\w\s]/gi, ''));
   } else {//if no user challenged
     bot.reply(message, 'You didn\'t challenge anyone you chicken shit! :chicken: :poop:');
