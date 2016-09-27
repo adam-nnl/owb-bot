@@ -96,6 +96,7 @@ function privateConvo(bot, message) {
         bot.reply(message, 'OK, nevermind!');
       }
  });
+ });
     
 
   
