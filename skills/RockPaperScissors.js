@@ -75,41 +75,27 @@ function privateConvo(bot, message) {
       if (convo.status === 'completed') {
         var userPlay = convo.extractResponse('rockPaperScissors');
 
-        db.get(message.user, (err, data) => {
+
           if (err) throw err;
 
-          //const updateData = data;
-          //updateData.players[user].played = userPlay;
 
-          //const { players } = updateData;
-          //const playerIDs = Object.keys(players);
 
-          // check if only one player has played
-          //const onlyOnePlayed = playerIDs.find((id) => players[id].played === '');
+          if (db.get(message.user)) { //SWAP THIS LOGIC to support RPSSLSBSWG if all players have played!
 
-          if (onlyOnePlayed) { //SWAP THIS LOGIC to support RPSSLSBSWG if all players have played!
-            //db.save(updateData, (err) => {
-             //// if (err) throw err;
-             // bot.reply(message, `<@${user}> has played!`);
-            //});
+		  
+		  
           } else { //record player enter, note in channel
-            //const gameResults = playerIDs.map((id) => `<@${id}> played ${players[id].played}`);
 
-            //bot.reply(message, gameResults.join(' & '));
-
-            // reset the game data
-            //db.save({ id: updateData.id }, (err) => {
-             // if (err) throw err;
-            //});
+		  
+		  
           }
-        });
+
+		  
       } else {
         // this happens if the conversation ended prematurely for some reason
         bot.reply(message, 'OK, nevermind!');
       }
-    });
-  };
-}
+ });
     
 
   
