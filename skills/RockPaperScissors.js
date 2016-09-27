@@ -26,6 +26,7 @@ function privateConvo(bot, message) {
 
   return (err, convo) => {
     if (err) throw err;
+    var rnd = Math.floor(Math.random()* 65);
     var encouragementArray = [
     'I believe in you!',
     'I\'m sure you\'ll do your best!',
@@ -33,7 +34,7 @@ function privateConvo(bot, message) {
     'nothing can stop you!',
     'you have the eye of the tiger',
     'you have the heart of a champion',
-    'your lucky numbers are 52, 17, 4, 61, 44, 23',
+    'your lucky numbers are ' + rnd + ', ' + rnd + ', ' + rnd + ', ' + rnd + ', ' + rnd + '.',
     'take no prisoners!',
     'Rock! On second thought- Paper! No Wait! Scissors...actually IDK',
     'Paper! No- Rock! No Wait! Scissors; I made things worse, sorry.',
