@@ -5,8 +5,8 @@ var Brain = require('./src/brain');
 var Ears = require('./src/ears');
 var builtinPhrases = require('./builtins');
 var Store = require('jfs');
-var db = new Store('./src/memory.json');
-
+//var db = new Store('./src/memory.json');
+var db = new Store('memory');
 var Bottie = {
   Brain: new Brain(),
   Ears: new Ears(process.env.SLACK_TOKEN)
