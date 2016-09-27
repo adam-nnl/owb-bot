@@ -1,5 +1,6 @@
 module.exports = function(skill, info, bot, message, db) {
-  db.save(message.team, 'test:test', function(err, id){
+  var id = db.saveSync(message.team,{foo:{bar:"baz"}});
+  //db.save(message.team, 'test:test', function(err, id){
   // id is a unique ID
     });
   var userData = message.text.match(/\<(.*?)\>/g);  //suss out any @mentions of users
