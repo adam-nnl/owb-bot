@@ -39,7 +39,7 @@ function privateConvo(bot, message) {
     'like a boss.',
     'Establish dominance!',
     'what is best in life- Crush your enemies. See them driven before you. Hear the lamentations of their women.',
-    'Rock it, or paper it? or _scissor_ it?'  
+    'Rock it, or paper it? or _scissor_ it?',
     'Cut em with scissors!',
     'Steady like a rock!',    
     'give no quarter, and expect none either!',
