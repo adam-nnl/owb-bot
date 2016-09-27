@@ -1,5 +1,5 @@
 var BotKit = require('botkit');
-var teamID;
+var teamID = '';
 module.exports = Ears;
 
 var Bot = BotKit.slackbot({
