@@ -16,7 +16,7 @@ function Ears(token) {
   this.token = token;
 }
 
-Ears.prototype.listen = function() {
+Ears.prototype.listen = function(db) {
   console.log('TOKEN: ' + this.token);
   this.bot = Bot.spawn({
     token: this.token
