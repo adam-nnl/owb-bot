@@ -88,7 +88,7 @@ function privateConvo(bot, message) {
           //const onlyOnePlayed = playerIDs.find((id) => players[id].played === '');
 
           if (onlyOnePlayed) { //SWAP THIS LOGIC to support RPSSLSBSWG if all players have played!
-            db.save(updateData, (err) => {
+            //db.save(updateData, (err) => {
              //// if (err) throw err;
              // bot.reply(message, `<@${user}> has played!`);
             //});
@@ -99,8 +99,8 @@ function privateConvo(bot, message) {
 
             // reset the game data
             //db.save({ id: updateData.id }, (err) => {
-              if (err) throw err;
-            });
+             // if (err) throw err;
+            //});
           }
         });
       } else {
