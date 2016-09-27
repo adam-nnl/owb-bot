@@ -1,5 +1,11 @@
 module.exports = function(skill, info, bot, message, db) {
-    var userData = message.text.match(/\<(.*?)\>/g);  //suss out any @mentions of users
+    var channelID = {
+    channel: "bar"
+    };  
+  db.save(channelID, function(err, id){
+  // id is a unique ID
+    });
+  var userData = message.text.match(/\<(.*?)\>/g);  //suss out any @mentions of users
   if (userData) {
     // if there is a user is mentioned initiate the challenge!
     //console.log(userData[0].replace(/[^\w\s]/gi, ''));
