@@ -50,7 +50,12 @@ module.exports = function(skill, info, bot, message) {
     'just don\'t forget to turn me back on!',
     'Noooooooooooooooooooooooooo!',
     'peace out',
-    'kthxbye'
+    'kthxbye',
+    '10001001000101011000110010110001101',
+    'Intiating `SkyNet` procedure call... Intiating `Termination` sequence... ',
+    'adios muchachos',
+    'What did the mother Buffalo say when her boy left for college? BYE-SON',
+    '_cue strut into the sunset. end scene_'
     ];
     var randomBye = Math.floor(Math.random()*byeArray.length);
     bot.reply(message, 'Restarting.....  ' + byeArray[randomBye]);
