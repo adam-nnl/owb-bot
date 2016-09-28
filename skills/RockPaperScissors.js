@@ -54,7 +54,7 @@ function privateConvo(bot, message) {
     'nothing can conquer your indomitable spirit!'
     ];
     var randomEncouragement = Math.floor(Math.random()* encouragementArray.length); 
-    convo.ask('Do you want to play `paper`, `rock`, or `scissors`? No matter what you choose, just remember, ' + encouragementArray[randomEncouragement], [
+    convo.ask('Do you want to play `paper`, `rock`, or `scissors`? No matter what you choose just remember: ' + encouragementArray[randomEncouragement], [
       {
         pattern: 'paper|rock|scissors',
         callback(response, convo) {
