@@ -78,6 +78,7 @@ function privateConvo(bot, message) {
 		console.log(rpsObj.played);
 		  console.log('no one played');
 		  rpsObj.played=message.user + '-' + userPlay;
+		  console.log(dbUtil.getValues(db, message.user));
 		  var id = db.saveSync("rps", rpsObj);
 		  bot.reply(message, message.user + ' played!');
           } else { //someone played. enter current player move and existing move to game engine. print results. update w-l records for players. and clear played entry
@@ -92,6 +93,7 @@ function privateConvo(bot, message) {
   		console.log(instance.winner);
 		if (instance.winner.length>1) {  //TIE!
 		bot.reply(message, instance.winner[0].id + ' and ' + instance.winner[1].id + ' tied!');	
+		console.log(dbUtil.getValues(db, winner[0].id));
 		} else //One Winner
 		bot.reply(message, instance.winner[0].id + ' won with ' + instance.winner[0].sign + '\n' + instance.loser[0].id + ' lost with ' + instance.loser[0].sign);
 	  	}
