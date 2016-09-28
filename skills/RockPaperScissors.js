@@ -84,11 +84,13 @@ function privateConvo(bot, message) {
 
 
           if (rpsObj.hasOwnProperty('player1')== "" && rpsObj.hasOwnProperty('player2')== "") { //SWAP THIS LOGIC to support RPSSLSBSWG if all players have played!
-
+		console.log(rpsObj.player1);
+		  console.log(rpsObj.player2);
 		  console.log('no one played');
 		  
           } else { //record player enter, note in channel
-
+		console.log(rpsObj.player1);
+		  console.log(rpsObj.player2);
 		  console.log('someone played');
 		  
           }
