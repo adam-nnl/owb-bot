@@ -85,7 +85,7 @@ function privateConvo(bot, message) {
   		var instance = new gameEngine(gameEngine.DefaultRules);
 		var player1 = rpsObj.played.split("-");
   		instance.addPlayer({id: player1[0], sign: player1[1]});
-  		instance.addPlayer({id: message.user, sign: userPlay});
+  		instance.addPlayer({id: 'player2', sign: userPlay});
   		instance.play();
   		console.log(instance.winner);
 		bot.reply(message, instance.winner.id + ' won!');
