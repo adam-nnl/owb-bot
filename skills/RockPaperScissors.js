@@ -15,7 +15,6 @@ module.exports = function(skill, info, bot, message, db) {
 
 function privateConvo(bot, message) {
   const { user, channel } = message;
-
   return (err, convo) => {
     if (err) throw err;
     var rnd = Math.floor(Math.random()* 65);
@@ -71,15 +70,14 @@ function privateConvo(bot, message) {
       if (convo.status === 'completed') {
         var userPlay = convo.extractResponse('rockPaperScissors');
 	var rpsObj = db.getSync("rps");
-
           if (err) throw err;
-
-
 
           if (rpsObj.played== "") { //no one played yet. enter player move and note to channel
 		console.log(rpsObj.played);
 		  console.log('no one played');
-		  
+		  rpsObj.played=userPlay;
+		  var id = db.saveSync("rps", rpsObj);
+		  bot.reply(message, message.user + ' played!');
           } else { //someone played. enter current player move and existing move to game engine. print results. update w-l records for players. and clear played entry
 		console.log(rpsObj.played);
 		  console.log('someone played');
