@@ -88,7 +88,7 @@ function privateConvo(bot, message) {
   		instance.addPlayer({id: message.user, sign: userPlay});
   		instance.play();
   		console.log(instance.winner);
-		  bot.reply(message, instance.winner + ' won!');
+		  bot.reply(instance.winner.id + ' won!');
 		  
           }
 
