@@ -137,12 +137,12 @@ function privateConvo(bot, message) {
   		instance.addPlayer({id: message.user, sign: userPlay});
   		instance.play();
   		console.log(instance.winner);
-		if (Object.keys(instance.winner).length>1) {  //TIE!
-		bot.reply(message, instance.winner[0].id + ' and ' + instance.winner[1].id + ' tied!');	
+		//if (Object.keys(instance.winner).length>1) {  //TIE!
+		//bot.reply(message, instance.winner[0].id + ' and ' + instance.winner[1].id + ' tied!');	
 		console.log(getValues(db, winner[0].id));
-		} else //One Winner
+		//} else //One Winner
 		bot.reply(message, instance.winner[0].id + ' won with ' + instance.winner[0].sign + '\n' + instance.loser[0].id + ' lost with ' + instance.loser[0].sign);
-	  	}
+	  	//}
 		rpsObj.played='';
 		var id = db.saveSync("rps", rpsObj);
           }
