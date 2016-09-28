@@ -1,9 +1,4 @@
 module.exports = function(skill, info, bot, message, db) {
-function isArrayEmpty(array) {
-    return array.every(function(el) {
-        Object.keys(el).length !== 0
-    });
-}	
   var userData = message.text.match(/\<(.*?)\>/g);  //suss out any @mentions of users
   if (userData) {
     // if there is a user is mentioned initiate the challenge!
@@ -81,7 +76,7 @@ function privateConvo(bot, message) {
 
 
 
-          if (isArrayEmpty(rpsObj)) { //SWAP THIS LOGIC to support RPSSLSBSWG if all players have played!
+          if (rpsObj[0].length===0&&rpsObj[1].length===0) { //SWAP THIS LOGIC to support RPSSLSBSWG if all players have played!
 
 		  
 		  
