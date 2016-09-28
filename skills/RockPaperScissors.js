@@ -11,7 +11,7 @@ module.exports = function(skill, info, bot, message, db) {
     bot.startPrivateConversation({user: challenged}, privateConvo(bot, message));		  
   } else {
     //if no user challenged
-    bot.reply(message, 'You didn\'t challenge anyone you chicken shit! :chicken: :poop:');
+    bot.reply(message, 'You didn\'t challenge anyone chicken shit. :chicken: :poop:');
   }
 
 function privateConvo(bot, message) {
@@ -89,7 +89,11 @@ function privateConvo(bot, message) {
   		instance.addPlayer({id: message.user, sign: userPlay});
   		instance.play();
   		console.log(instance.winner);
-		bot.reply(message, instance.winner[0].id + ' won with ' + instance.winner[0].sign);
+		if (instance.winner.length>1) {  //TIE!
+		bot.reply(message, instance.winner[0].id + ' and ' + instance.winner[1].id + ' tied!');	
+		} else //One Winner
+		bot.reply(message, instance.winner[0].id + ' won with ' + instance.winner[0].sign + '\n' + instance.loser[0].id + ' lost with ' + instance.loser[0].sign);
+	  	}
 		rpsObj.played='';
 		var id = db.saveSync("rps", rpsObj);
           }
