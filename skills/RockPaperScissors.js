@@ -1,4 +1,5 @@
-module.exports = function(skill, info, bot, message, db) {	
+module.exports = function(skill, info, bot, message, db) {
+  var dbUtil = require('./dbUtil');		
   var userData = message.text.match(/\<(.*?)\>/g);  //suss out any @mentions of users
   if (userData) {
     // if there is a user is mentioned initiate the challenge!
