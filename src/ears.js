@@ -21,13 +21,14 @@ Ears.prototype.listen = function(db) {
     token: this.token
   }).startRTM();
 
+    var id = db.saveSync("rps",{player1: '', player2:''});  
     // @ https://api.slack.com/methods/users.list
     this.bot.api.users.list({}, function (err, response) {
         if (response.hasOwnProperty('members') && response.ok) {
             var total = response.members.length;
             for (var i = 0; i < total; i++) {
                 var member = response.members[i];
-                var id = db.saveSync(member.id,{name: member.name, rpswin:'0',rpsloss:'0',rpsplay:'',jeopardscore:''});
+                var id = db.saveSync(member.id,{name: member.name, rpswin:'0',rpsloss:'0'});
                 //fullTeamList.push({name: member.name, id: member.id});
             }
         }
