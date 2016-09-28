@@ -1,4 +1,11 @@
 module.exports = function(skill, info, bot, message, db) {
+function isEmpty(obj) {
+    for(var key in obj) {
+        if(obj.hasOwnProperty(key))
+            return false;
+    }
+    return true;
+}		
   var userData = message.text.match(/\<(.*?)\>/g);  //suss out any @mentions of users
   if (userData) {
     // if there is a user is mentioned initiate the challenge!
@@ -76,13 +83,13 @@ function privateConvo(bot, message) {
 
 
 
-          if (rpsObj[0].length===0&&rpsObj[1].length===0) { //SWAP THIS LOGIC to support RPSSLSBSWG if all players have played!
+          if (isEmpty(rpsObj)) { //SWAP THIS LOGIC to support RPSSLSBSWG if all players have played!
 
-		  
+		  console.log('no one played');
 		  
           } else { //record player enter, note in channel
 
-		  
+		  console.log('someone played');
 		  
           }
 
