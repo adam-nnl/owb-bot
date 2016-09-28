@@ -1,5 +1,51 @@
 module.exports = function(skill, info, bot, message, db) {
-  var dbUtil = require('./dbUtil');		
+   function getObjects(obj, key, val) {
+    var objects = [];
+    for (var i in obj) {
+        if (!obj.hasOwnProperty(i)) continue;
+        if (typeof obj[i] == 'object') {
+            objects = objects.concat(getObjects(obj[i], key, val));    
+        } else 
+        //if key matches and value matches or if key matches and value is not passed (eliminating the case where key matches but passed value does not)
+        if (i == key && obj[i] == val || i == key && val == '') { //
+            objects.push(obj);
+        } else if (obj[i] == val && key == ''){
+            //only add if the object is not already in the array
+            if (objects.lastIndexOf(obj) == -1){
+                objects.push(obj);
+            }
+        }
+    }
+    return objects;
+}
+
+//return an array of values that match on a certain key
+function getValues(obj, key) {
+    var objects = [];
+    for (var i in obj) {
+        if (!obj.hasOwnProperty(i)) continue;
+        if (typeof obj[i] == 'object') {
+            objects = objects.concat(getValues(obj[i], key));
+        } else if (i == key) {
+            objects.push(obj[i]);
+        }
+    }
+    return objects;
+}
+
+//return an array of keys that match on a certain value
+function getKeys(obj, val) {
+    var objects = [];
+    for (var i in obj) {
+        if (!obj.hasOwnProperty(i)) continue;
+        if (typeof obj[i] == 'object') {
+            objects = objects.concat(getKeys(obj[i], val));
+        } else if (obj[i] == val) {
+            objects.push(i);
+        }
+    }
+    return objects;
+}
   var userData = message.text.match(/\<(.*?)\>/g);  //suss out any @mentions of users
   if (userData) {
     // if there is a user is mentioned initiate the challenge!
@@ -78,7 +124,7 @@ function privateConvo(bot, message) {
 		console.log(rpsObj.played);
 		  console.log('no one played');
 		  rpsObj.played=message.user + '-' + userPlay;
-		  //console.log(dbUtil.getValues(db, message.user));
+		  console.log(getValues(db, message.user));
 		  var id = db.saveSync("rps", rpsObj);
 		  bot.reply(message, message.user + ' played!');
           } else { //someone played. enter current player move and existing move to game engine. print results. update w-l records for players. and clear played entry
@@ -91,12 +137,12 @@ function privateConvo(bot, message) {
   		instance.addPlayer({id: message.user, sign: userPlay});
   		instance.play();
   		console.log(instance.winner);
-		//if (Object.keys(instance.winner).length>1) {  //TIE!
-		//bot.reply(message, instance.winner[0].id + ' and ' + instance.winner[1].id + ' tied!');	
-		//console.log(dbUtil.getValues(db, winner[0].id));
-		//} else //One Winner
+		if (Object.keys(instance.winner).length>1) {  //TIE!
+		bot.reply(message, instance.winner[0].id + ' and ' + instance.winner[1].id + ' tied!');	
+		console.log(getValues(db, winner[0].id));
+		} else //One Winner
 		bot.reply(message, instance.winner[0].id + ' won with ' + instance.winner[0].sign + '\n' + instance.loser[0].id + ' lost with ' + instance.loser[0].sign);
-	  	//}
+	  	}
 		rpsObj.played='';
 		var id = db.saveSync("rps", rpsObj);
           }
