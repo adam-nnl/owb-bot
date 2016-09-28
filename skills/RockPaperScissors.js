@@ -80,7 +80,13 @@ function privateConvo(bot, message) {
 		  bot.reply(message, message.user + ' played!');
           } else { //someone played. enter current player move and existing move to game engine. print results. update w-l records for players. and clear played entry
 		console.log(rpsObj.played);
-		  console.log('someone played');
+		console.log('someone played');
+		var gameEngine = require('./Rock-Paper-Spock');
+  		var instance = new gameEngine(gameEngine.DefaultRules);
+  		instance.addPlayer({id: 1, sign: rpsObj.played});
+  		instance.addPlayer({id: 2, sign: userPlay});
+  		instance.play();
+  		console.log(instance.winner);
 		  
           }
 
@@ -95,19 +101,5 @@ function privateConvo(bot, message) {
  };
     
 
-  
-  
-  var gameEngine = require('./Rock-Paper-Spock');
-  
-    //bot.api.users.info({user: message.user}, (error, response) => {
-        //bot.reply(message, 'Rock Paper Scissors (lizard, spock, spiderman, batman, wizard, glock?)');
-    //})  
 
-  var instance = new gameEngine(gameEngine.DefaultRules);
-  instance.addPlayer({id: 1, sign: "paper"});
-  instance.addPlayer({id: 2, sign: "rock"});
-  instance.play();
-  console.log(instance.winner);
-  //note players that won-lost, add support for W-L records
-  //bot.reply(message, 'test successful. maybe code something more useful next time?');
 };
