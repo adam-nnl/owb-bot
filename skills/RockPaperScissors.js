@@ -91,7 +91,7 @@ function privateConvo(bot, message) {
   		instance.addPlayer({id: message.user, sign: userPlay});
   		instance.play();
   		console.log(instance.winner);
-		if (instance.winner.length>1) {  //TIE!
+		if (Object.keys(instance.winner).length>1) {  //TIE!
 		bot.reply(message, instance.winner[0].id + ' and ' + instance.winner[1].id + ' tied!');	
 		//console.log(dbUtil.getValues(db, winner[0].id));
 		} else //One Winner
