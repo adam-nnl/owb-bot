@@ -21,7 +21,7 @@ Ears.prototype.listen = function(db) {
     token: this.token
   }).startRTM();
 
-    var id = db.saveSync("rps",{player1: '', player2:''});  
+    var id = db.saveSync("rps",{played: ''});  
     // @ https://api.slack.com/methods/users.list
     this.bot.api.users.list({}, function (err, response) {
         if (response.hasOwnProperty('members') && response.ok) {
