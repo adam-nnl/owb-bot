@@ -1,11 +1,4 @@
-module.exports = function(skill, info, bot, message, db) {
-function isEmpty(obj) {
-    for(var key in obj) {
-        if(obj.hasOwnProperty(key))
-            return false;
-    }
-    return true;
-}		
+module.exports = function(skill, info, bot, message, db) {	
   var userData = message.text.match(/\<(.*?)\>/g);  //suss out any @mentions of users
   if (userData) {
     // if there is a user is mentioned initiate the challenge!
@@ -52,7 +45,7 @@ function privateConvo(bot, message) {
     'give no quarter, and expect none either!:crossed_swords: ',
     'no retreat, no surrender!:crossed_swords: ', 
     'I\'m not friends with losers- so try not to lose, eh? :trollface:',     
-    'If you\'re not first you\'re last!',        
+    'If you\'re not first you\'re last!:medal:',        
     'if you lose, don\'t bother coming home. :trollface:',
     'nothing can conquer your indomitable spirit!:raised_hands:'
     ];
@@ -83,14 +76,12 @@ function privateConvo(bot, message) {
 
 
 
-          if (rpsObj.player1== "" && rpsObj.player2== "") { //SWAP THIS LOGIC to support RPSSLSBSWG if all players have played!
-		console.log(rpsObj.player1);
-		  console.log(rpsObj.player2);
+          if (rpsObj.played== "") { //no one played yet. enter player move and note to channel
+		console.log(rpsObj.played);
 		  console.log('no one played');
 		  
-          } else { //record player enter, note in channel
-		console.log(rpsObj.player1);
-		  console.log(rpsObj.player2);
+          } else { //someone played. enter current player move and existing move to game engine. print results. update w-l records for players. and clear played entry
+		console.log(rpsObj.played);
 		  console.log('someone played');
 		  
           }
