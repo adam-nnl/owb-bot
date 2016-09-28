@@ -70,13 +70,13 @@ function privateConvo(bot, message) {
     convo.on('end', (convo) => {
       if (convo.status === 'completed') {
         var userPlay = convo.extractResponse('rockPaperScissors');
-
+	var rpsObj = db.getSync("rps");
 
           if (err) throw err;
 
 
 
-          if (db.get(message.user)) { //SWAP THIS LOGIC to support RPSSLSBSWG if all players have played!
+          if (rpsObj.player1='' && rpsObj.player2='') { //SWAP THIS LOGIC to support RPSSLSBSWG if all players have played!
 
 		  
 		  
