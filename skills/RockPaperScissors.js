@@ -8,6 +8,7 @@ module.exports = function(skill, info, bot, message, db) {
         bot.reply(message, ':rotating_light: <@' + response.user.name + '> you have been challenged to a game of ROCK:mountain: , PAPER:spiral_note_pad: , SCISSORS:scissors:! Prepare to defend your honor!'); 
     });
     bot.startPrivateConversation(message, privateConvo(bot, message));
+    bot.startPrivateConversation({user: challenged}, privateConvo(bot, message));		  
   } else {
     //if no user challenged
     bot.reply(message, 'You didn\'t challenge anyone you chicken shit! :chicken: :poop:');
