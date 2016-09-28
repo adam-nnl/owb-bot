@@ -95,8 +95,9 @@ function privateConvo(bot, message) {
         // this happens if the conversation ended prematurely for some reason
         bot.reply(message, 'OK, nevermind!');
       }
-	  }
- });
+	  
+	  });
+ }
  };
     
 
