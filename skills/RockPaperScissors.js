@@ -83,8 +83,9 @@ function privateConvo(bot, message) {
 		console.log('someone played');
 		var gameEngine = require('./Rock-Paper-Spock');
   		var instance = new gameEngine(gameEngine.DefaultRules);
-  		instance.addPlayer({id: 1, sign: rpsObj.played});
-  		instance.addPlayer({id: 2, sign: userPlay});
+		var player1 = rpsObj.played.split("-");
+  		instance.addPlayer({id: player1[0], sign: player1[1]});
+  		instance.addPlayer({id: message.user, sign: userPlay});
   		instance.play();
   		console.log(instance.winner);
 		  bot.reply(message, instance.winner + ' won!');
