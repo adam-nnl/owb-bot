@@ -83,7 +83,7 @@ function privateConvo(bot, message) {
 
 
 
-          if (isEmpty(rpsObj)) { //SWAP THIS LOGIC to support RPSSLSBSWG if all players have played!
+          if (rpsObj.hasOwnProperty('player1')== "" && rpsObj.hasOwnProperty('player2')== "") { //SWAP THIS LOGIC to support RPSSLSBSWG if all players have played!
 
 		  console.log('no one played');
 		  
