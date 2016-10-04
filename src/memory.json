@@ -1,1 +1,133 @@
-{}
+{
+  "U23KV2C5V": {
+    "name": "adam",
+    "rpswin": "0",
+    "rpsloss": "0"
+  },
+  "U28U1NZK4": {
+    "name": "bbqbot",
+    "rpswin": "0",
+    "rpsloss": "0"
+  },
+  "U235YPXMM": {
+    "name": "becca.smith",
+    "rpswin": "0",
+    "rpsloss": "0"
+  },
+  "U23P5JZ4J": {
+    "name": "bhussain",
+    "rpswin": "0",
+    "rpsloss": "0"
+  },
+  "U234VNZSS": {
+    "name": "bob.lessard",
+    "rpswin": "0",
+    "rpsloss": "0"
+  },
+  "U2360TYSC": {
+    "name": "drewf",
+    "rpswin": "0",
+    "rpsloss": "0"
+  },
+  "U235DGNLS": {
+    "name": "fletch",
+    "rpswin": "0",
+    "rpsloss": "0"
+  },
+  "U23569E8J": {
+    "name": "graham",
+    "rpswin": "0",
+    "rpsloss": "0"
+  },
+  "U2D9FK9PY": {
+    "name": "itsmeray",
+    "rpswin": "0",
+    "rpsloss": "0"
+  },
+  "U25EFB1D1": {
+    "name": "kandi",
+    "rpswin": "0",
+    "rpsloss": "0"
+  },
+  "U24JVVBFB": {
+    "name": "karldelaisla",
+    "rpswin": "0",
+    "rpsloss": "0"
+  },
+  "U235YU892": {
+    "name": "kato",
+    "rpswin": "0",
+    "rpsloss": "0"
+  },
+  "U2358EP7Y": {
+    "name": "kelraiser",
+    "rpswin": "0",
+    "rpsloss": "0"
+  },
+  "U23LF1SUE": {
+    "name": "lauren.b",
+    "rpswin": "0",
+    "rpsloss": "0"
+  },
+  "U235S418V": {
+    "name": "monika",
+    "rpswin": "0",
+    "rpsloss": "0"
+  },
+  "U2555KT4Y": {
+    "name": "nhparaboschi",
+    "rpswin": "0",
+    "rpsloss": "0"
+  },
+  "U23LEUYA0": {
+    "name": "ouartfolio",
+    "rpswin": "0",
+    "rpsloss": "0"
+  },
+  "U23N33WRK": {
+    "name": "philrn",
+    "rpswin": "0",
+    "rpsloss": "0"
+  },
+  "U234M4X62": {
+    "name": "radar",
+    "rpswin": "0",
+    "rpsloss": "0"
+  },
+  "U234YQEBZ": {
+    "name": "ratedr4rudy",
+    "rpswin": "0",
+    "rpsloss": "0"
+  },
+  "U234D9TJP": {
+    "name": "redbird",
+    "rpswin": "0",
+    "rpsloss": "0"
+  },
+  "U234PAAE4": {
+    "name": "stephanie",
+    "rpswin": "0",
+    "rpsloss": "0"
+  },
+  "U28M3BPJL": {
+    "name": "trailmaster",
+    "rpswin": "0",
+    "rpsloss": "0"
+  },
+  "U2E131M6J": {
+    "name": "wtfbot",
+    "rpswin": "0",
+    "rpsloss": "0"
+  },
+  "USLACKBOT": {
+    "name": "slackbot",
+    "rpswin": "0",
+    "rpsloss": "0"
+  },
+  "rps": {
+    "played": ""
+  },
+  "94d116dd-b351-4108-b4f1-7d3d8216c59f": {
+    "foo": "bar"
+  }
+}
