@@ -66,7 +66,7 @@ function Dick(user) {
     var randomDick = Math.floor(Math.random()* dickArray.length);    
 
     var dmChannel = response.channel.id
-    bot.say({channel: dmChannel, text: 'You have a secret admirer:'})
+    bot.say({channel: dmChannel, text: 'This is a pic of a dick:'})
     bot.say({channel: dmChannel, text: dickArray[randomDick]})
     })    
     
