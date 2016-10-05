@@ -52,12 +52,21 @@ function Dick(user) {
     'https://www.archives.gov/presidential-libraries/events/centennials/nixon/images/rn-2-m.jpg',   
     'http://cp91279.biography.com/1000509261001/1000509261001_2085990537001_Bio-Biography-Richard-Nixon-SF.jpg', 
     'http://cdn.history.com/sites/2/2013/11/Richard_Nixon-AB.jpeg',
+    'https://media.giphy.com/media/xT0BKIEo6kn0neyQw0/giphy.gif',
+    'https://67.media.tumblr.com/1d4f04a3ee4d4c791ff220b3d49caec9/tumblr_nifrxpSxYh1sjcg5bo2_250.gif',
+    'http://images6.fanpop.com/image/photos/38100000/Galavant-King-Richard-galavant-38159030-245-150.gif',
+    'https://fancastic.files.wordpress.com/2015/01/gal1-nailedit.gif',    
+    'http://i.imgur.com/4UODx0x.gif',
+    'http://37.media.tumblr.com/f391a55f92cf2b262b36e7558b4f9468/tumblr_n25nd9cEnO1qicfexo2_250.gif',
+    'http://25.media.tumblr.com/tumblr_lw4lkl7XNV1qe5vzdo4_250.gif',
+    'https://admin.mashable.com/wp-content/gallery/pumpkin-spice/dicktracy.gif', 
+    'http://66.media.tumblr.com/d649782e36928f613f5a1f4afb9aa8c1/tumblr_mpnldchKmh1s4rha3o2_250.gif',     
     'https://www.whitehouse.gov/sites/whitehouse.gov/files/images/first-family/37_richard_m_nixon.jpg'
     ];
     var randomDick = Math.floor(Math.random()* dickArray.length);    
 
     var dmChannel = response.channel.id
-    bot.say({channel: dmChannel, text: 'Someone thought you should see dick:'})
+    bot.say({channel: dmChannel, text: 'You have a secret admirer:'})
     bot.say({channel: dmChannel, text: dickArray[randomDick]})
     })    
     
